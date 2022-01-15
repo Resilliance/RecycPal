@@ -23,7 +23,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		5D3090EAA4C2C480178E54E63981F89F /* PBXContainerItemProxy */ = {
+		E7C50CDA3B15BBE09188B74042A21D40 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -33,25 +33,24 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		18F4A037CFAC37C0CF13825EBF071A99 /* libXNNPACK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libXNNPACK.a; path = install/lib/libXNNPACK.a; sourceTree = "<group>"; };
+		064C616C2C9B52800E84A68F53A6A1CA /* libXNNPACK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libXNNPACK.a; path = install/lib/libXNNPACK.a; sourceTree = "<group>"; };
 		1E5029579C41AFEF760544AE7465AC68 /* Pods-RecycPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecycPal.release.xcconfig"; sourceTree = "<group>"; };
-		370CE24E2A3EC31CEE36FFAFBC07BE2C /* libtorch_cpu.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch_cpu.a; path = install/lib/libtorch_cpu.a; sourceTree = "<group>"; };
+		28CFFE61C73473619EA8C5C144ED4C36 /* libeigen_blas.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libeigen_blas.a; path = install/lib/libeigen_blas.a; sourceTree = "<group>"; };
 		3AB260C5A33EBF9ED791A5EDFBC99555 /* Pods-RecycPal */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-RecycPal"; path = "libPods-RecycPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E328054432C4E5BA1A80BD2C99BBA03 /* libpthreadpool.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpthreadpool.a; path = install/lib/libpthreadpool.a; sourceTree = "<group>"; };
 		52589C960B63A6A775615DF2F1AC96FB /* Pods-RecycPal-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RecycPal-acknowledgements.plist"; sourceTree = "<group>"; };
+		55409EDB9D8D37EC649B3D55C1B9888F /* libtorch.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch.a; path = install/lib/libtorch.a; sourceTree = "<group>"; };
 		694E95E459D5E8F8895EFDEFC59296DB /* LibTorch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LibTorch.h; path = src/LibTorch.h; sourceTree = "<group>"; };
 		78C983CAE4C65FB55827060244584F14 /* LibTorch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LibTorch.debug.xcconfig; sourceTree = "<group>"; };
-		8B31B440EAC19D24DB8E101AF6A6E50E /* libpytorch_qnnpack.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpytorch_qnnpack.a; path = install/lib/libpytorch_qnnpack.a; sourceTree = "<group>"; };
-		943D8BB958EADA6BCAF303335A9907A7 /* libpthreadpool.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpthreadpool.a; path = install/lib/libpthreadpool.a; sourceTree = "<group>"; };
-		9AA976E71D797DCC0120C8F4704CE59D /* libtorch.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch.a; path = install/lib/libtorch.a; sourceTree = "<group>"; };
+		817B3C04C022D6C354FEAB10B152181E /* libcpuinfo.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcpuinfo.a; path = install/lib/libcpuinfo.a; sourceTree = "<group>"; };
+		86EE18712EEB016E9E38EB9125AFD855 /* libclog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libclog.a; path = install/lib/libclog.a; sourceTree = "<group>"; };
 		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		C611D749DE52C1A622D7F3F139D660F2 /* libc10.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libc10.a; path = install/lib/libc10.a; sourceTree = "<group>"; };
+		A8D2A77DB0F3B3CB4BF21FA3F5B0CEFE /* libpytorch_qnnpack.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpytorch_qnnpack.a; path = install/lib/libpytorch_qnnpack.a; sourceTree = "<group>"; };
 		C81D0EB41767D25B385B23718C933E9E /* Pods-RecycPal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RecycPal-dummy.m"; sourceTree = "<group>"; };
-		CC6ECE907F70FD38A98FE6D8052EF6A6 /* libcpuinfo.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcpuinfo.a; path = install/lib/libcpuinfo.a; sourceTree = "<group>"; };
 		CFB34E9C678CD93AC7D31437DDAF04F5 /* LibTorch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LibTorch.release.xcconfig; sourceTree = "<group>"; };
 		D1D3E76BBE27B6BDF9FC617DE09751AB /* Pods-RecycPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecycPal.debug.xcconfig"; sourceTree = "<group>"; };
 		E99AD964806EEB1DA295993668CF96F5 /* Pods-RecycPal-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RecycPal-acknowledgements.markdown"; sourceTree = "<group>"; };
-		EA6874F029D4A92AB34F56D4287F15A8 /* libeigen_blas.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libeigen_blas.a; path = install/lib/libeigen_blas.a; sourceTree = "<group>"; };
-		F54959AB0880788118588BD90C6A9EC3 /* libclog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libclog.a; path = install/lib/libclog.a; sourceTree = "<group>"; };
+		EF501F28F1286B2334C8E18F638D1AC8 /* libc10.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libc10.a; path = install/lib/libc10.a; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,12 +64,20 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1A3A664383F15747E09FA706BF63EE2E /* Torch */ = {
+			isa = PBXGroup;
+			children = (
+				A0317F8713C8553956E12251DEDBBBC2 /* Frameworks */,
+			);
+			name = Torch;
+			sourceTree = "<group>";
+		};
 		3C35B124DFCD32E169E2D33887FAFE2A /* LibTorch */ = {
 			isa = PBXGroup;
 			children = (
 				F9CDD24E8EFBE30CD02189A5CB8DE6BD /* Core */,
 				9F2D607EB126040403698E394CB06EFF /* Support Files */,
-				4AB6CC11C50609B12C93CB7C25E5F18C /* Torch */,
+				1A3A664383F15747E09FA706BF63EE2E /* Torch */,
 			);
 			name = LibTorch;
 			path = LibTorch;
@@ -82,14 +89,6 @@
 				F11B92429D33354B2E61C526D0C7F1DD /* Pods-RecycPal */,
 			);
 			name = "Targets Support Files";
-			sourceTree = "<group>";
-		};
-		4AB6CC11C50609B12C93CB7C25E5F18C /* Torch */ = {
-			isa = PBXGroup;
-			children = (
-				AFB8F18C2FFE34C71B225305434D566E /* Frameworks */,
-			);
-			name = Torch;
 			sourceTree = "<group>";
 		};
 		8AF1037135507A753B298F1CE93DFA21 /* Products */ = {
@@ -110,18 +109,17 @@
 			path = "../Target Support Files/LibTorch";
 			sourceTree = "<group>";
 		};
-		AFB8F18C2FFE34C71B225305434D566E /* Frameworks */ = {
+		A0317F8713C8553956E12251DEDBBBC2 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				C611D749DE52C1A622D7F3F139D660F2 /* libc10.a */,
-				F54959AB0880788118588BD90C6A9EC3 /* libclog.a */,
-				CC6ECE907F70FD38A98FE6D8052EF6A6 /* libcpuinfo.a */,
-				EA6874F029D4A92AB34F56D4287F15A8 /* libeigen_blas.a */,
-				943D8BB958EADA6BCAF303335A9907A7 /* libpthreadpool.a */,
-				8B31B440EAC19D24DB8E101AF6A6E50E /* libpytorch_qnnpack.a */,
-				9AA976E71D797DCC0120C8F4704CE59D /* libtorch.a */,
-				370CE24E2A3EC31CEE36FFAFBC07BE2C /* libtorch_cpu.a */,
-				18F4A037CFAC37C0CF13825EBF071A99 /* libXNNPACK.a */,
+				EF501F28F1286B2334C8E18F638D1AC8 /* libc10.a */,
+				86EE18712EEB016E9E38EB9125AFD855 /* libclog.a */,
+				817B3C04C022D6C354FEAB10B152181E /* libcpuinfo.a */,
+				28CFFE61C73473619EA8C5C144ED4C36 /* libeigen_blas.a */,
+				3E328054432C4E5BA1A80BD2C99BBA03 /* libpthreadpool.a */,
+				A8D2A77DB0F3B3CB4BF21FA3F5B0CEFE /* libpytorch_qnnpack.a */,
+				55409EDB9D8D37EC649B3D55C1B9888F /* libtorch.a */,
+				064C616C2C9B52800E84A68F53A6A1CA /* libXNNPACK.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -197,7 +195,7 @@
 			buildRules = (
 			);
 			dependencies = (
-				03A8AC68A7D034D490C96788BC6709AA /* PBXTargetDependency */,
+				C1A30943B42DEB63A2969C55CA9DBC25 /* PBXTargetDependency */,
 			);
 			name = "Pods-RecycPal";
 			productName = "Pods-RecycPal";
@@ -244,11 +242,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		03A8AC68A7D034D490C96788BC6709AA /* PBXTargetDependency */ = {
+		C1A30943B42DEB63A2969C55CA9DBC25 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = LibTorch;
 			target = 91B207498E2D5F1F9161594983380E15 /* LibTorch */;
-			targetProxy = 5D3090EAA4C2C480178E54E63981F89F /* PBXContainerItemProxy */;
+			targetProxy = E7C50CDA3B15BBE09188B74042A21D40 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
