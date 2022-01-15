@@ -1,0 +1,495 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXAggregateTarget section */
+		91B207498E2D5F1F9161594983380E15 /* LibTorch */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 5DE6AC5E2151AC23DC67042630DCC8FA /* Build configuration list for PBXAggregateTarget "LibTorch" */;
+			buildPhases = (
+			);
+			dependencies = (
+			);
+			name = LibTorch;
+		};
+/* End PBXAggregateTarget section */
+
+/* Begin PBXBuildFile section */
+		02C8F54B179B1A6EBDF9C1C823C30DBF /* Pods-RecycPal-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = C81D0EB41767D25B385B23718C933E9E /* Pods-RecycPal-dummy.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		5D3090EAA4C2C480178E54E63981F89F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 91B207498E2D5F1F9161594983380E15;
+			remoteInfo = LibTorch;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		18F4A037CFAC37C0CF13825EBF071A99 /* libXNNPACK.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libXNNPACK.a; path = install/lib/libXNNPACK.a; sourceTree = "<group>"; };
+		1E5029579C41AFEF760544AE7465AC68 /* Pods-RecycPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecycPal.release.xcconfig"; sourceTree = "<group>"; };
+		370CE24E2A3EC31CEE36FFAFBC07BE2C /* libtorch_cpu.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch_cpu.a; path = install/lib/libtorch_cpu.a; sourceTree = "<group>"; };
+		3AB260C5A33EBF9ED791A5EDFBC99555 /* Pods-RecycPal */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "Pods-RecycPal"; path = "libPods-RecycPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		52589C960B63A6A775615DF2F1AC96FB /* Pods-RecycPal-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-RecycPal-acknowledgements.plist"; sourceTree = "<group>"; };
+		694E95E459D5E8F8895EFDEFC59296DB /* LibTorch.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = LibTorch.h; path = src/LibTorch.h; sourceTree = "<group>"; };
+		78C983CAE4C65FB55827060244584F14 /* LibTorch.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LibTorch.debug.xcconfig; sourceTree = "<group>"; };
+		8B31B440EAC19D24DB8E101AF6A6E50E /* libpytorch_qnnpack.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpytorch_qnnpack.a; path = install/lib/libpytorch_qnnpack.a; sourceTree = "<group>"; };
+		943D8BB958EADA6BCAF303335A9907A7 /* libpthreadpool.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libpthreadpool.a; path = install/lib/libpthreadpool.a; sourceTree = "<group>"; };
+		9AA976E71D797DCC0120C8F4704CE59D /* libtorch.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libtorch.a; path = install/lib/libtorch.a; sourceTree = "<group>"; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		C611D749DE52C1A622D7F3F139D660F2 /* libc10.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libc10.a; path = install/lib/libc10.a; sourceTree = "<group>"; };
+		C81D0EB41767D25B385B23718C933E9E /* Pods-RecycPal-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-RecycPal-dummy.m"; sourceTree = "<group>"; };
+		CC6ECE907F70FD38A98FE6D8052EF6A6 /* libcpuinfo.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libcpuinfo.a; path = install/lib/libcpuinfo.a; sourceTree = "<group>"; };
+		CFB34E9C678CD93AC7D31437DDAF04F5 /* LibTorch.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = LibTorch.release.xcconfig; sourceTree = "<group>"; };
+		D1D3E76BBE27B6BDF9FC617DE09751AB /* Pods-RecycPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-RecycPal.debug.xcconfig"; sourceTree = "<group>"; };
+		E99AD964806EEB1DA295993668CF96F5 /* Pods-RecycPal-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-RecycPal-acknowledgements.markdown"; sourceTree = "<group>"; };
+		EA6874F029D4A92AB34F56D4287F15A8 /* libeigen_blas.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libeigen_blas.a; path = install/lib/libeigen_blas.a; sourceTree = "<group>"; };
+		F54959AB0880788118588BD90C6A9EC3 /* libclog.a */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = archive.ar; name = libclog.a; path = install/lib/libclog.a; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		94BAC87E6772F5FB92649726E04F86CB /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3C35B124DFCD32E169E2D33887FAFE2A /* LibTorch */ = {
+			isa = PBXGroup;
+			children = (
+				F9CDD24E8EFBE30CD02189A5CB8DE6BD /* Core */,
+				9F2D607EB126040403698E394CB06EFF /* Support Files */,
+				4AB6CC11C50609B12C93CB7C25E5F18C /* Torch */,
+			);
+			name = LibTorch;
+			path = LibTorch;
+			sourceTree = "<group>";
+		};
+		48D0888F611AF6F9858996D394F13795 /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				F11B92429D33354B2E61C526D0C7F1DD /* Pods-RecycPal */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		4AB6CC11C50609B12C93CB7C25E5F18C /* Torch */ = {
+			isa = PBXGroup;
+			children = (
+				AFB8F18C2FFE34C71B225305434D566E /* Frameworks */,
+			);
+			name = Torch;
+			sourceTree = "<group>";
+		};
+		8AF1037135507A753B298F1CE93DFA21 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3AB260C5A33EBF9ED791A5EDFBC99555 /* Pods-RecycPal */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9F2D607EB126040403698E394CB06EFF /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				78C983CAE4C65FB55827060244584F14 /* LibTorch.debug.xcconfig */,
+				CFB34E9C678CD93AC7D31437DDAF04F5 /* LibTorch.release.xcconfig */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/LibTorch";
+			sourceTree = "<group>";
+		};
+		AFB8F18C2FFE34C71B225305434D566E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				C611D749DE52C1A622D7F3F139D660F2 /* libc10.a */,
+				F54959AB0880788118588BD90C6A9EC3 /* libclog.a */,
+				CC6ECE907F70FD38A98FE6D8052EF6A6 /* libcpuinfo.a */,
+				EA6874F029D4A92AB34F56D4287F15A8 /* libeigen_blas.a */,
+				943D8BB958EADA6BCAF303335A9907A7 /* libpthreadpool.a */,
+				8B31B440EAC19D24DB8E101AF6A6E50E /* libpytorch_qnnpack.a */,
+				9AA976E71D797DCC0120C8F4704CE59D /* libtorch.a */,
+				370CE24E2A3EC31CEE36FFAFBC07BE2C /* libtorch_cpu.a */,
+				18F4A037CFAC37C0CF13825EBF071A99 /* libXNNPACK.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		CF1408CF629C7361332E53B88F7BD30C = {
+			isa = PBXGroup;
+			children = (
+				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
+				D89477F20FB1DE18A04690586D7808C4 /* Frameworks */,
+				FD52B374DA15F1B9E363F460D1034CE6 /* Pods */,
+				8AF1037135507A753B298F1CE93DFA21 /* Products */,
+				48D0888F611AF6F9858996D394F13795 /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		D89477F20FB1DE18A04690586D7808C4 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		F11B92429D33354B2E61C526D0C7F1DD /* Pods-RecycPal */ = {
+			isa = PBXGroup;
+			children = (
+				E99AD964806EEB1DA295993668CF96F5 /* Pods-RecycPal-acknowledgements.markdown */,
+				52589C960B63A6A775615DF2F1AC96FB /* Pods-RecycPal-acknowledgements.plist */,
+				C81D0EB41767D25B385B23718C933E9E /* Pods-RecycPal-dummy.m */,
+				D1D3E76BBE27B6BDF9FC617DE09751AB /* Pods-RecycPal.debug.xcconfig */,
+				1E5029579C41AFEF760544AE7465AC68 /* Pods-RecycPal.release.xcconfig */,
+			);
+			name = "Pods-RecycPal";
+			path = "Target Support Files/Pods-RecycPal";
+			sourceTree = "<group>";
+		};
+		F9CDD24E8EFBE30CD02189A5CB8DE6BD /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				694E95E459D5E8F8895EFDEFC59296DB /* LibTorch.h */,
+			);
+			name = Core;
+			sourceTree = "<group>";
+		};
+		FD52B374DA15F1B9E363F460D1034CE6 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3C35B124DFCD32E169E2D33887FAFE2A /* LibTorch */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		CD47875C466C8C1B1E190E7C24E9DEF2 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		A89A44FE8B65D4220EE66686B8562CF6 /* Pods-RecycPal */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 493EA57B9C7E8120B1CF4009797B6E8B /* Build configuration list for PBXNativeTarget "Pods-RecycPal" */;
+			buildPhases = (
+				CD47875C466C8C1B1E190E7C24E9DEF2 /* Headers */,
+				CE57A3ADD211A1E99A6F3F3766131E3A /* Sources */,
+				94BAC87E6772F5FB92649726E04F86CB /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				03A8AC68A7D034D490C96788BC6709AA /* PBXTargetDependency */,
+			);
+			name = "Pods-RecycPal";
+			productName = "Pods-RecycPal";
+			productReference = 3AB260C5A33EBF9ED791A5EDFBC99555 /* Pods-RecycPal */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1240;
+				LastUpgradeCheck = 1240;
+			};
+			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+			);
+			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
+			productRefGroup = 8AF1037135507A753B298F1CE93DFA21 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				91B207498E2D5F1F9161594983380E15 /* LibTorch */,
+				A89A44FE8B65D4220EE66686B8562CF6 /* Pods-RecycPal */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		CE57A3ADD211A1E99A6F3F3766131E3A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				02C8F54B179B1A6EBDF9C1C823C30DBF /* Pods-RecycPal-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		03A8AC68A7D034D490C96788BC6709AA /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = LibTorch;
+			target = 91B207498E2D5F1F9161594983380E15 /* LibTorch */;
+			targetProxy = 5D3090EAA4C2C480178E54E63981F89F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		40E95BB5B424A9B4071118B29930EE6C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1E5029579C41AFEF760544AE7465AC68 /* Pods-RecycPal.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		90B695546A54EFC6B2109F5D512B3FBE /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D1D3E76BBE27B6BDF9FC617DE09751AB /* Pods-RecycPal.debug.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MACH_O_TYPE = staticlib;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		90E160CAEB53538041A42763DAF1156A /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CFB34E9C678CD93AC7D31437DDAF04F5 /* LibTorch.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		9553C89E183877A5CB2F3C6801BEC129 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
+		BA62ACFDA8456B2ADBAFEF08E8C16CCC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 78C983CAE4C65FB55827060244584F14 /* LibTorch.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90D4D09BCB6A4660E43ACBE9ECB6FE9A /* Debug */,
+				9553C89E183877A5CB2F3C6801BEC129 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		493EA57B9C7E8120B1CF4009797B6E8B /* Build configuration list for PBXNativeTarget "Pods-RecycPal" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				90B695546A54EFC6B2109F5D512B3FBE /* Debug */,
+				40E95BB5B424A9B4071118B29930EE6C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5DE6AC5E2151AC23DC67042630DCC8FA /* Build configuration list for PBXAggregateTarget "LibTorch" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				BA62ACFDA8456B2ADBAFEF08E8C16CCC /* Debug */,
+				90E160CAEB53538041A42763DAF1156A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = BFDFE7DC352907FC980B868725387E98 /* Project object */;
+}
