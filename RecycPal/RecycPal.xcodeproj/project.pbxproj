@@ -140,7 +140,6 @@
 				0EA1128FDC7BF6F33FABC2BE /* Pods-RecycPal.debug.xcconfig */,
 				31BD37FD20C04AB77B66D3C6 /* Pods-RecycPal.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -491,7 +490,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MAL3SH348L;
+				DEVELOPMENT_TEAM = 2LG7N2H9LJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecycPal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -504,7 +503,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal;
+				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.deltahacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -520,7 +519,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = MAL3SH348L;
+				DEVELOPMENT_TEAM = 2LG7N2H9LJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecycPal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -533,7 +532,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal;
+				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.deltahacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
