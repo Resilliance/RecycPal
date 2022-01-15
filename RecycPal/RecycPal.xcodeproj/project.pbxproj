@@ -10,6 +10,7 @@
 		07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C172793344A00380AA0 /* HistoryViewController.swift */; };
 		07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C192793345500380AA0 /* CameraViewController.swift */; };
 		07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C1B2793345E00380AA0 /* InfoViewController.swift */; };
+		07459C1F2793819D00380AA0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C1E2793819D00380AA0 /* Constants.swift */; };
 		4B7617F6AA3AAEFF7ECBF5F4 /* libPods-RecycPal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F0BD82DE49E181002A70BB /* libPods-RecycPal.a */; };
 		4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B46C2792906C00363F98 /* AppDelegate.swift */; };
 		4C18B4712792906C00363F98 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B4702792906C00363F98 /* HomeTabViewController.swift */; };
@@ -41,6 +42,7 @@
 		07459C172793344A00380AA0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		07459C192793345500380AA0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		07459C1B2793345E00380AA0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
+		07459C1E2793819D00380AA0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		0EA1128FDC7BF6F33FABC2BE /* Pods-RecycPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycPal.debug.xcconfig"; path = "Target Support Files/Pods-RecycPal/Pods-RecycPal.debug.xcconfig"; sourceTree = "<group>"; };
 		31BD37FD20C04AB77B66D3C6 /* Pods-RecycPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycPal.release.xcconfig"; path = "Target Support Files/Pods-RecycPal/Pods-RecycPal.release.xcconfig"; sourceTree = "<group>"; };
 		4C18B4692792906C00363F98 /* RecycPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecycPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -93,6 +95,14 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		07459C1D2793817100380AA0 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				07459C1E2793819D00380AA0 /* Constants.swift */,
+			);
+			path = Utilities;
+			sourceTree = "<group>";
+		};
 		4C18B4602792906C00363F98 = {
 			isa = PBXGroup;
 			children = (
@@ -118,6 +128,7 @@
 		4C18B46B2792906C00363F98 /* RecycPal */ = {
 			isa = PBXGroup;
 			children = (
+				07459C1D2793817100380AA0 /* Utilities */,
 				07459C162793342D00380AA0 /* ViewControllers */,
 				4C18B46C2792906C00363F98 /* AppDelegate.swift */,
 				4C18B4702792906C00363F98 /* HomeTabViewController.swift */,
@@ -324,6 +335,7 @@
 				4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */,
 				07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */,
 				07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */,
+				07459C1F2793819D00380AA0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

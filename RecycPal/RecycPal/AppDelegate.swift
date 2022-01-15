@@ -17,7 +17,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.makeKeyAndVisible()
         
         // View controllers
-        window?.backgroundColor = .systemBackground
+        window?.backgroundColor = Colors.green
         
         let main = HomeTabViewController()
         
