@@ -7,12 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C172793344A00380AA0 /* HistoryViewController.swift */; };
+		07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C192793345500380AA0 /* CameraViewController.swift */; };
+		07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C1B2793345E00380AA0 /* InfoViewController.swift */; };
 		4B7617F6AA3AAEFF7ECBF5F4 /* libPods-RecycPal.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 96F0BD82DE49E181002A70BB /* libPods-RecycPal.a */; };
-		4C16161627931D4400C3D06E /* TorchModule.m in Sources */ = {isa = PBXBuildFile; fileRef = 4C16161527931D4400C3D06E /* TorchModule.m */; };
 		4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B46C2792906C00363F98 /* AppDelegate.swift */; };
-		4C18B46F2792906C00363F98 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B46E2792906C00363F98 /* SceneDelegate.swift */; };
-		4C18B4712792906C00363F98 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B4702792906C00363F98 /* ViewController.swift */; };
-		4C18B4742792906C00363F98 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C18B4722792906C00363F98 /* Main.storyboard */; };
+		4C18B4712792906C00363F98 /* HomeTabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B4702792906C00363F98 /* HomeTabViewController.swift */; };
 		4C18B4762792906D00363F98 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4C18B4752792906D00363F98 /* Assets.xcassets */; };
 		4C18B4792792906D00363F98 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4C18B4772792906D00363F98 /* LaunchScreen.storyboard */; };
 		4C18B4842792906E00363F98 /* RecycPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B4832792906E00363F98 /* RecycPalTests.swift */; };
@@ -38,16 +38,14 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		07459C172793344A00380AA0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
+		07459C192793345500380AA0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
+		07459C1B2793345E00380AA0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
 		0EA1128FDC7BF6F33FABC2BE /* Pods-RecycPal.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycPal.debug.xcconfig"; path = "Target Support Files/Pods-RecycPal/Pods-RecycPal.debug.xcconfig"; sourceTree = "<group>"; };
 		31BD37FD20C04AB77B66D3C6 /* Pods-RecycPal.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RecycPal.release.xcconfig"; path = "Target Support Files/Pods-RecycPal/Pods-RecycPal.release.xcconfig"; sourceTree = "<group>"; };
-		4C16161327931CE600C3D06E /* TorchModule.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = TorchModule.h; sourceTree = "<group>"; };
-		4C16161427931D4400C3D06E /* RecycPal-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RecycPal-Bridging-Header.h"; sourceTree = "<group>"; };
-		4C16161527931D4400C3D06E /* TorchModule.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = TorchModule.m; sourceTree = "<group>"; };
 		4C18B4692792906C00363F98 /* RecycPal.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RecycPal.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C18B46C2792906C00363F98 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		4C18B46E2792906C00363F98 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		4C18B4702792906C00363F98 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		4C18B4732792906C00363F98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4C18B4702792906C00363F98 /* HomeTabViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTabViewController.swift; sourceTree = "<group>"; };
 		4C18B4752792906D00363F98 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		4C18B4782792906D00363F98 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		4C18B47A2792906D00363F98 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -85,14 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		4C16161127931CC900C3D06E /* TorchBridge */ = {
+		07459C162793342D00380AA0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
-				4C16161427931D4400C3D06E /* RecycPal-Bridging-Header.h */,
-				4C16161327931CE600C3D06E /* TorchModule.h */,
-				4C16161527931D4400C3D06E /* TorchModule.m */,
+				07459C172793344A00380AA0 /* HistoryViewController.swift */,
+				07459C192793345500380AA0 /* CameraViewController.swift */,
+				07459C1B2793345E00380AA0 /* InfoViewController.swift */,
 			);
-			path = TorchBridge;
+			path = ViewControllers;
 			sourceTree = "<group>";
 		};
 		4C18B4602792906C00363F98 = {
@@ -120,11 +118,9 @@
 		4C18B46B2792906C00363F98 /* RecycPal */ = {
 			isa = PBXGroup;
 			children = (
-				4C16161127931CC900C3D06E /* TorchBridge */,
+				07459C162793342D00380AA0 /* ViewControllers */,
 				4C18B46C2792906C00363F98 /* AppDelegate.swift */,
-				4C18B46E2792906C00363F98 /* SceneDelegate.swift */,
-				4C18B4702792906C00363F98 /* ViewController.swift */,
-				4C18B4722792906C00363F98 /* Main.storyboard */,
+				4C18B4702792906C00363F98 /* HomeTabViewController.swift */,
 				4C18B4752792906D00363F98 /* Assets.xcassets */,
 				4C18B4772792906D00363F98 /* LaunchScreen.storyboard */,
 				4C18B47A2792906D00363F98 /* Info.plist */,
@@ -274,7 +270,6 @@
 			files = (
 				4C18B4792792906D00363F98 /* LaunchScreen.storyboard in Resources */,
 				4C18B4762792906D00363F98 /* Assets.xcassets in Resources */,
-				4C18B4742792906C00363F98 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -324,10 +319,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C18B4712792906C00363F98 /* ViewController.swift in Sources */,
+				4C18B4712792906C00363F98 /* HomeTabViewController.swift in Sources */,
+				07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */,
 				4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */,
-				4C16161627931D4400C3D06E /* TorchModule.m in Sources */,
-				4C18B46F2792906C00363F98 /* SceneDelegate.swift in Sources */,
+				07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */,
+				07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -364,14 +360,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4C18B4722792906C00363F98 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				4C18B4732792906C00363F98 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		4C18B4772792906D00363F98 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -513,7 +501,6 @@
 				INFOPLIST_FILE = RecycPal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -524,7 +511,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.deltahacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RecycPal/TorchBridge/RecycPal-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,7 +531,6 @@
 				INFOPLIST_FILE = RecycPal/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
-				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -556,7 +541,6 @@
 				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.deltahacks;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
-				SWIFT_OBJC_BRIDGING_HEADER = "RecycPal/TorchBridge/RecycPal-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
