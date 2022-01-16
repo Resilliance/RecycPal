@@ -20,9 +20,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         window?.backgroundColor = Colors.green
         
         let main = HomeTabViewController()
-        
-        let navVC = UINavigationController(rootViewController: main)
-        window?.rootViewController = navVC
+        window?.rootViewController = main
         
         return true
     }
