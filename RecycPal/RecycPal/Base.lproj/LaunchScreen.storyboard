@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19455" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" launchScreen="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="01J-lp-oVM">
     <device id="retina6_0" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19454"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
@@ -17,24 +17,29 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Fwj-74-8Sg">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Fwj-74-8Sg">
                                 <rect key="frame" x="52" y="214" width="287" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-DC-rCS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-DC-rCS">
                                 <rect key="frame" x="64" y="244" width="263" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start recycling!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-nY-JA6">
-                                <rect key="frame" x="141.66666666666666" y="165" width="107" height="22"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" verticalHuggingPriority="251" misplaced="YES" text="start recycling!" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-nY-JA6">
+                                <rect key="frame" x="117" y="167" width="157" height="22"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="22" id="CYS-2n-PS4"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="18"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                                 <color key="shadowColor" systemColor="secondaryLabelColor"/>
                                 <size key="shadowOffset" width="0.0" height="1"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecycPal" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeK-HP-Bl8">
-                                <rect key="frame" x="102" y="411" width="186" height="58"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RecycPal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yeK-HP-Bl8">
+                                <rect key="frame" x="62" y="410" width="266" height="58"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="58" id="rGP-vA-gcL"/>
+                                </constraints>
                                 <fontDescription key="fontDescription" name="HelveticaNeue-Thin" family="Helvetica Neue" pointSize="48"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
@@ -45,10 +50,20 @@
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" name="Green"/>
                         <constraints>
-                            <constraint firstItem="DfW-nY-JA6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-246" id="2dR-tn-k4b"/>
-                            <constraint firstItem="yeK-HP-Bl8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="caE-4B-O5n"/>
-                            <constraint firstItem="DfW-nY-JA6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ihe-lX-yIf"/>
-                            <constraint firstItem="yeK-HP-Bl8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="18" id="uD9-OT-4UU"/>
+                            <constraint firstItem="DfW-nY-JA6" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="123" id="27G-Tq-f5Y"/>
+                            <constraint firstItem="DfW-nY-JA6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="8l6-B5-Vtk"/>
+                            <constraint firstItem="Fwj-74-8Sg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="52" id="ACC-Nm-sbo"/>
+                            <constraint firstItem="yeK-HP-Bl8" firstAttribute="top" secondItem="Fwj-74-8Sg" secondAttribute="bottom" constant="31" id="E0y-z0-WuL"/>
+                            <constraint firstItem="Fwj-74-8Sg" firstAttribute="centerX" secondItem="xnm-DC-rCS" secondAttribute="centerX" id="EQV-uW-1hF"/>
+                            <constraint firstItem="xnm-DC-rCS" firstAttribute="centerX" secondItem="yeK-HP-Bl8" secondAttribute="centerX" id="Lr8-Ga-Vor"/>
+                            <constraint firstItem="Fwj-74-8Sg" firstAttribute="top" secondItem="DfW-nY-JA6" secondAttribute="bottom" constant="25" id="OjG-9X-6lK"/>
+                            <constraint firstItem="DfW-nY-JA6" firstAttribute="centerX" secondItem="Fwj-74-8Sg" secondAttribute="centerX" id="ZIb-yz-dGm"/>
+                            <constraint firstItem="xnm-DC-rCS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="64" id="kXi-N7-Hai"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="yeK-HP-Bl8" secondAttribute="bottom" constant="342" id="kqZ-Ag-aMR"/>
+                            <constraint firstItem="yeK-HP-Bl8" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="62" id="vKn-l0-lRT"/>
+                            <constraint firstItem="yeK-HP-Bl8" firstAttribute="top" secondItem="xnm-DC-rCS" secondAttribute="bottom" constant="19" id="vtN-oE-HeE"/>
+                            <constraint firstItem="xnm-DC-rCS" firstAttribute="top" secondItem="DfW-nY-JA6" secondAttribute="bottom" constant="55" id="wnD-Tv-fBL"/>
+                            <constraint firstItem="DfW-nY-JA6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="117" id="zSW-31-Rtg"/>
                         </constraints>
                     </view>
                 </viewController>
