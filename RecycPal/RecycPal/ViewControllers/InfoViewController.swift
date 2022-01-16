@@ -13,6 +13,8 @@ class InfoViewController: UITableViewController {
         Material(title: "Paper", image: UIImage(named: "paper")!, content: "Lorem ipsum"),
         Material(title: "Plastic", image: UIImage(named: "plastic")!, content: "Lorem ipsum"),
         Material(title: "Metal", image: UIImage(named: "metal")!, content: "Lorem ipsum"),
+        Material(title: "Glass", image: UIImage(named: "glass")!, content: "Lorem ipsum"),
+        Material(title: "Trash", image: UIImage(named: "trash")!, content: "Lorem ipsum"),
     ]
 
     override func viewDidLoad() {

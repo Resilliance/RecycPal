@@ -17,13 +17,11 @@
                         <rect key="frame" x="0.0" y="0.0" width="390" height="844"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Fwj-74-8Sg">
-                                <rect key="frame" x="52" y="214" width="287" height="165"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Fwj-74-8Sg">
+                                <rect key="frame" x="106" y="213" width="178" height="173"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-DC-rCS">
-                                <rect key="frame" x="64" y="244" width="263" height="147"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-DC-rCS">
+                                <rect key="frame" x="127" y="242.66666666666663" width="136" height="150"/>
                             </imageView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="start recycling!" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DfW-nY-JA6">
                                 <rect key="frame" x="141.66666666666666" y="165" width="107" height="22"/>
@@ -46,9 +44,13 @@
                         <color key="backgroundColor" name="Green"/>
                         <constraints>
                             <constraint firstItem="DfW-nY-JA6" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-246" id="2dR-tn-k4b"/>
+                            <constraint firstItem="xnm-DC-rCS" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Bdl-hE-WS2"/>
+                            <constraint firstItem="xnm-DC-rCS" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-104.5" id="JqY-Z2-Bj4"/>
                             <constraint firstItem="yeK-HP-Bl8" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="caE-4B-O5n"/>
                             <constraint firstItem="DfW-nY-JA6" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="ihe-lX-yIf"/>
+                            <constraint firstItem="Fwj-74-8Sg" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="n8a-Rv-Gfh"/>
                             <constraint firstItem="yeK-HP-Bl8" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="18" id="uD9-OT-4UU"/>
+                            <constraint firstItem="Fwj-74-8Sg" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-122.5" id="yKV-XZ-299"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -58,8 +60,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipse" width="736" height="712"/>
-        <image name="logo2" width="1512" height="1980"/>
+        <image name="ellipse" width="178" height="173"/>
+        <image name="logo" width="136" height="150"/>
         <namedColor name="Green">
             <color red="0.31764705882352939" green="0.63921568627450975" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
