@@ -20,7 +20,7 @@
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="ellipse" translatesAutoresizingMaskIntoConstraints="NO" id="Fwj-74-8Sg">
                                 <rect key="frame" x="52" y="214" width="287" height="165"/>
                             </imageView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo2" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-DC-rCS">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="xnm-DC-rCS">
                                 <rect key="frame" x="64" y="244" width="263" height="147"/>
                                 <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
                             </imageView>
