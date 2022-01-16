@@ -19,7 +19,7 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
-        let item1 = UINavigationController(rootViewController: HistoryViewController())
+        let item1 = UINavigationController(rootViewController: HistoryViewController(style: .grouped))
         let icon1 = UITabBarItem(
             title: "History",
             image: UIImage(systemName: "books.vertical"),
