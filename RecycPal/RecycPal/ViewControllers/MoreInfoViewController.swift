@@ -44,7 +44,7 @@ class MoreInfoViewController: UIViewController {
     private var titleLabel: UILabel = {
         let label = UILabel()
         label.textColor = Colors.green
-        label.font = UIFont.boldSystemFont(ofSize: 50)
+        label.font = UIFont.boldSystemFont(ofSize: 37)
         return label
     }()
     
