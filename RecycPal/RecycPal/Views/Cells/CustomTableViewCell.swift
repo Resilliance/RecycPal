@@ -11,18 +11,8 @@ class CustomTableViewCell: UITableViewCell {
     
     static let identifier = "CustomTableViewCell"
     
-    var image: UIImage?
-    var title: String?
+    let cellContentButton = UIButton()
     var selectCellHandler: (() -> Void)?
-    
-    private let cellContentButton: UIButton = {
-        var buttonConfig = UIButton.Configuration.filled()
-        buttonConfig.cornerStyle = .medium
-        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
-        buttonConfig.background.backgroundColor = Colors.yellow
-        
-        return UIButton(configuration: buttonConfig, primaryAction: nil)
-    }()
 
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
@@ -30,7 +20,11 @@ class CustomTableViewCell: UITableViewCell {
         
         // Button config
         cellContentButton.titleLabel?.font = .systemFont(ofSize: 23, weight: .semibold)
+        cellContentButton.layer.cornerRadius = 10
+        cellContentButton.contentHorizontalAlignment = .left
+        cellContentButton.clipsToBounds = true
         cellContentButton.addTarget(self, action: #selector(didTapButton(_:)), for: .touchUpInside)
+        cellContentButton.titleLabel?.numberOfLines = 0
         cellContentButton.startAnimatingPressActions()
         contentView.addSubview(cellContentButton)
         

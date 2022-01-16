@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		070AA55F2793E92B00C87E0D /* Material.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070AA55E2793E92B00C87E0D /* Material.swift */; };
+		070AA5612793FC5700C87E0D /* MoreInfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 070AA5602793FC5700C87E0D /* MoreInfoViewController.swift */; };
 		07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C172793344A00380AA0 /* HistoryViewController.swift */; };
 		07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C192793345500380AA0 /* CameraViewController.swift */; };
 		07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07459C1B2793345E00380AA0 /* InfoViewController.swift */; };
@@ -40,6 +42,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		070AA55E2793E92B00C87E0D /* Material.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Material.swift; sourceTree = "<group>"; };
+		070AA5602793FC5700C87E0D /* MoreInfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoreInfoViewController.swift; sourceTree = "<group>"; };
 		07459C172793344A00380AA0 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		07459C192793345500380AA0 /* CameraViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CameraViewController.swift; sourceTree = "<group>"; };
 		07459C1B2793345E00380AA0 /* InfoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoViewController.swift; sourceTree = "<group>"; };
@@ -87,12 +91,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		070AA55D2793E90A00C87E0D /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				070AA55E2793E92B00C87E0D /* Material.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		07459C162793342D00380AA0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
 				07459C172793344A00380AA0 /* HistoryViewController.swift */,
 				07459C192793345500380AA0 /* CameraViewController.swift */,
 				07459C1B2793345E00380AA0 /* InfoViewController.swift */,
+				070AA5602793FC5700C87E0D /* MoreInfoViewController.swift */,
 			);
 			path = ViewControllers;
 			sourceTree = "<group>";
@@ -146,6 +159,7 @@
 		4C18B46B2792906C00363F98 /* RecycPal */ = {
 			isa = PBXGroup;
 			children = (
+				070AA55D2793E90A00C87E0D /* ViewModels */,
 				07459C2027938FFE00380AA0 /* Views */,
 				07459C1D2793817100380AA0 /* Utilities */,
 				07459C162793342D00380AA0 /* ViewControllers */,
@@ -353,7 +367,9 @@
 				07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */,
 				4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */,
 				07459C23279390AE00380AA0 /* CustomTableViewCell.swift in Sources */,
+				070AA55F2793E92B00C87E0D /* Material.swift in Sources */,
 				07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */,
+				070AA5612793FC5700C87E0D /* MoreInfoViewController.swift in Sources */,
 				07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */,
 				07459C1F2793819D00380AA0 /* Constants.swift in Sources */,
 			);
