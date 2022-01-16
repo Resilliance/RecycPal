@@ -6,6 +6,8 @@
 	<string></string>
 	<key>UIStatusBarStyle</key>
 	<string>UIStatusBarStyleLightContent</string>
+	<key>NSCameraUsageDescription</key>
+	<string>Please allow to take photos</string>
 	<key>UIViewControllerBasedStatusBarAppearance</key>
 	<false/>
 </dict>
