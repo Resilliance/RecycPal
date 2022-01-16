@@ -5,76 +5,20 @@
 //  Created by Denielle Abaquita on 1/15/22.
 //
 
-import AVFoundation
 import UIKit
+import AVFoundation
+import Vision
 
 class CameraViewController: UIViewController {
     
-    // Initialize CoreML + Vision variables and constants
-//    let imagePredictor = ImagePredictor()
-    let predictionsToShow = 1
-    
-    private let predictionLabel: UILabel = {
+    private let label: UILabel = {
         let label = UILabel()
-        label.backgroundColor = .systemGreen
+        label.textColor = .white
+        label.translatesAutoresizingMaskIntoConstraints = false
+        label.text = "Label"
+        label.font = label.font.withSize(30)
         return label
     }()
-    
-    private let imageView: UIImageView = {
-        let image = UIImageView()
-        return image
-    }()
-    
-    private func updateImage(_ image: UIImage) {
-        DispatchQueue.main.async {
-            self.imageView.image = image
-        }
-    }
-    
-    private func updatePredictionLabel(_ message: String) {
-        DispatchQueue.main.async {
-            self.predictionLabel.text = message
-        }
-    }
-    
-//    private func classifyImage(_ image: UIImage) {
-//        do {
-//            try self.imagePredictor.makePredictions(for: image, completionHandler: imagePredictionHandler)
-//        } catch {
-//            print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
-//        }
-//    }
-    
-//    private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
-//        guard let predictions = predictions else {
-//            updatePredictionLabel("No Predictions. (Check console log.)")
-//            return
-//        }
-//        
-//        let formattedPredictions = formatPredictions(predictions)
-//        
-//        let predictionString = formattedPredictions.joined(separator: "\n")
-//        updatePredictionLabel(predictionString)
-//    }
-//    
-//    private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
-//        let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
-//            var name = prediction.classification
-//            
-//            if let firstComma = name.firstIndex(of: ",") {
-//                name = String(name.prefix(upTo: firstComma))
-//            }
-//            
-//            return "\(name) - \(prediction.confidencePercentage)%"
-//        }
-//        
-//        return topPredictions
-//    }
-    
-    // Initializing Camera View
-    var session: AVCaptureSession?
-    let output = AVCapturePhotoOutput()
-    let previewLayer = AVCaptureVideoPreviewLayer()
     
     private let shutterButton: UIButton = {
         let button = UIButton(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
@@ -88,17 +32,19 @@ class CameraViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         view.backgroundColor = Colors.yellow
-        view.layer.addSublayer(previewLayer)
+        
+        checkPermission()
+        setupCaptureSession()
         
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
         view.addSubview(shutterButton)
         
-        checkPermission()
+        view.addSubview(label)
+        setupLabel()
     }
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        previewLayer.frame = view.bounds
         
         shutterButton.center = CGPoint(
             x: view.frame.width / 2,
@@ -106,17 +52,53 @@ class CameraViewController: UIViewController {
         )
     }
     
+    private func setupCaptureSession() {
+        
+        // creates a new capture session
+        let captureSession = AVCaptureSession()
+        
+        // search for available capture devices
+        let availableDevices = AVCaptureDevice.DiscoverySession(deviceTypes: [.builtInWideAngleCamera], mediaType: AVMediaType.video, position: .back).devices
+        
+        // get capture device, add device input to capture session
+        do {
+            if let captureDevice = availableDevices.first {
+                captureSession.addInput(try AVCaptureDeviceInput(device: captureDevice))
+            }
+        } catch {
+            print(error.localizedDescription)
+        }
+        
+        // setup output, add output to capture session
+        let captureOutput = AVCaptureVideoDataOutput()
+        captureSession.addOutput(captureOutput)
+        
+        captureOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
+        
+        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        previewLayer.frame = view.frame
+        previewLayer.videoGravity = .resizeAspectFill
+        view.layer.addSublayer(previewLayer)
+        
+        captureSession.startRunning()
+    }
+    
+    private func setupLabel() {
+        label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+    }
+    
     private func checkPermission() {
         switch AVCaptureDevice.authorizationStatus(for: .video) {
         case .authorized:
-            setUpCamera()
+            setupCaptureSession()
         case .denied:
             break
         case .notDetermined:
             AVCaptureDevice.requestAccess(for: .video) { [weak self] granted in
                 guard granted else { return }
                 DispatchQueue.main.async {
-                    self?.setUpCamera()
+                    self?.setupCaptureSession()
                 }
             }
         case .restricted:
@@ -126,57 +108,30 @@ class CameraViewController: UIViewController {
         }
     }
     
-    private func setUpCamera() {
-        let session = AVCaptureSession()
-        session.beginConfiguration()
-        if let device = AVCaptureDevice.default(for: .video) {
-            do {
-                let input = try AVCaptureDeviceInput(device: device)
-                if session.canAddInput(input) {
-                    session.addInput(input)
-                }
-                
-                let photoOutput = AVCapturePhotoOutput()
-                guard session.canAddOutput(photoOutput) else { return }
-                session.sessionPreset = .photo
-                session.addOutput(photoOutput)
-                session.commitConfiguration()
-                
-                previewLayer.videoGravity = .resizeAspectFill
-                previewLayer.session = session
-                
-                self.session = session
-                session.startRunning()
-            } catch {
-                print(error)
-            }
-        }
-    }
-    
     @objc private func didTapTakePhoto() {
-        output.capturePhoto(with: AVCapturePhotoSettings(), delegate: self)
+        let alert = UIAlertController(title: "Oops!", message: "Sorry, we haven't implemented this yet", preferredStyle: .alert)
+        alert.addAction(UIAlertAction(title: "Ok", style: .cancel))
+        self.present(alert, animated: true)
     }
 }
 
-extension CameraViewController: AVCapturePhotoCaptureDelegate {
-    func photoOutput(
-        _ output: AVCapturePhotoOutput,
-        didFinishProcessingPhoto photo: AVCapturePhoto,
-        error: Error?
-    ) {
-        guard let data = photo.fileDataRepresentation() else {
-            return
+extension CameraViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
+    func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
+        guard let res = try? RecycledObjects2_1(configuration: MLModelConfiguration()) else { return }
+        guard let model = try? VNCoreMLModel(for: res.model) else { return }
+        let request = VNCoreMLRequest(model: model) { (finishedRequest, error) in
+            guard let results = finishedRequest.results as? [VNClassificationObservation] else { return }
+            guard let Observation = results.first else { return }
+            
+            DispatchQueue.main.async(execute: {
+                self.label.text = "\(Observation.identifier)"
+                print(Observation.confidence)
+            })
         }
-        let image = UIImage(data: data)
+        guard let pixelBuffer: CVPixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
         
-        session?.stopRunning()
-        
-        let imageView = UIImageView(image: image)
-        imageView.contentMode = .scaleAspectFill
-        imageView.frame = view.bounds
-        
-        view.addSubview(imageView)
+        // executes request
+        try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
     }
 }
-
 
