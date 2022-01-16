@@ -102,6 +102,7 @@ class HistoryViewController: UITableViewController {
                     UIApplication.shared.open(url as URL, options:[:], completionHandler:nil)
                 }
             }
+            cell.cellContentButton.isEnabled = true
         } else {
             cell.cellContentButton.configuration = setUpButtonConfig(
                 title: "Oops!\n\nYou don't have any saved pictures. Please try taking one with the camera!",
