@@ -383,19 +383,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4C72D5932794052400D30DE1 /* VNClassificationObs.swift in Sources */,
 				4CC24BCC2794380700352922 /* CapturedImageView.swift in Sources */,
 				4C18B4712792906C00363F98 /* HomeTabViewController.swift in Sources */,
 				07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */,
 				4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */,
 				07459C23279390AE00380AA0 /* CustomTableViewCell.swift in Sources */,
-				4C72D590279404DC00D30DE1 /* RecycledObjects2.1.mlmodel in Sources */,
-				4C72D58D279402F100D30DE1 /* ImagePredictor.swift in Sources */,
 				070AA55F2793E92B00C87E0D /* Material.swift in Sources */,
 				07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */,
 				4CC24BD427943CB000352922 /* RecycledObjects2.1.mlmodel in Sources */,
 				070AA5612793FC5700C87E0D /* MoreInfoViewController.swift in Sources */,
-				4C72D595279405B800D30DE1 /* CGImagePropertyOrientation.swift in Sources */,
 				07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */,
 				4CC24BCA279437DD00352922 /* Camera2ViewController.swift in Sources */,
 				07459C1F2793819D00380AA0 /* Constants.swift in Sources */,
@@ -572,7 +568,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8Q9JTWJ9HG;
+				DEVELOPMENT_TEAM = 2LG7N2H9LJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecycPal/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photos";
@@ -585,7 +581,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.123;
+				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.12345;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -603,7 +599,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8Q9JTWJ9HG;
+				DEVELOPMENT_TEAM = 2LG7N2H9LJ;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecycPal/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photos";
@@ -616,7 +612,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.123;
+				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.12345;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

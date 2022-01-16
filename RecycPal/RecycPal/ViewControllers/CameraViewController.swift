@@ -11,7 +11,7 @@ import UIKit
 class CameraViewController: UIViewController {
     
     // Initialize CoreML + Vision variables and constants
-    let imagePredictor = ImagePredictor()
+//    let imagePredictor = ImagePredictor()
     let predictionsToShow = 1
     
     private let predictionLabel: UILabel = {
@@ -37,39 +37,39 @@ class CameraViewController: UIViewController {
         }
     }
     
-    private func classifyImage(_ image: UIImage) {
-        do {
-            try self.imagePredictor.makePredictions(for: image, completionHandler: imagePredictionHandler)
-        } catch {
-            print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
-        }
-    }
+//    private func classifyImage(_ image: UIImage) {
+//        do {
+//            try self.imagePredictor.makePredictions(for: image, completionHandler: imagePredictionHandler)
+//        } catch {
+//            print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
+//        }
+//    }
     
-    private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
-        guard let predictions = predictions else {
-            updatePredictionLabel("No Predictions. (Check console log.)")
-            return
-        }
-        
-        let formattedPredictions = formatPredictions(predictions)
-        
-        let predictionString = formattedPredictions.joined(separator: "\n")
-        updatePredictionLabel(predictionString)
-    }
-    
-    private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
-        let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
-            var name = prediction.classification
-            
-            if let firstComma = name.firstIndex(of: ",") {
-                name = String(name.prefix(upTo: firstComma))
-            }
-            
-            return "\(name) - \(prediction.confidencePercentage)%"
-        }
-        
-        return topPredictions
-    }
+//    private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
+//        guard let predictions = predictions else {
+//            updatePredictionLabel("No Predictions. (Check console log.)")
+//            return
+//        }
+//        
+//        let formattedPredictions = formatPredictions(predictions)
+//        
+//        let predictionString = formattedPredictions.joined(separator: "\n")
+//        updatePredictionLabel(predictionString)
+//    }
+//    
+//    private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
+//        let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
+//            var name = prediction.classification
+//            
+//            if let firstComma = name.firstIndex(of: ",") {
+//                name = String(name.prefix(upTo: firstComma))
+//            }
+//            
+//            return "\(name) - \(prediction.confidencePercentage)%"
+//        }
+//        
+//        return topPredictions
+//    }
     
     // Initializing Camera View
     var session: AVCaptureSession?
