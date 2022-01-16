@@ -22,10 +22,6 @@
 		4C18B4842792906E00363F98 /* RecycPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B4832792906E00363F98 /* RecycPalTests.swift */; };
 		4C18B48E2792906E00363F98 /* RecycPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B48D2792906E00363F98 /* RecycPalUITests.swift */; };
 		4C18B4902792906E00363F98 /* RecycPalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B48F2792906E00363F98 /* RecycPalUITestsLaunchTests.swift */; };
-		4C72D58D279402F100D30DE1 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D58C279402F100D30DE1 /* ImagePredictor.swift */; };
-		4C72D590279404DC00D30DE1 /* RecycledObjects2.1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D58F279404DC00D30DE1 /* RecycledObjects2.1.mlmodel */; };
-		4C72D5932794052400D30DE1 /* VNClassificationObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D5922794052400D30DE1 /* VNClassificationObs.swift */; };
-		4C72D595279405B800D30DE1 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D594279405B800D30DE1 /* CGImagePropertyOrientation.swift */; };
 		4CC24BCA279437DD00352922 /* Camera2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC24BC9279437DD00352922 /* Camera2ViewController.swift */; };
 		4CC24BCC2794380700352922 /* CapturedImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC24BCB2794380700352922 /* CapturedImageView.swift */; };
 		4CC24BCE2794382800352922 /* ViewController+Extras.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4CC24BCD2794382800352922 /* ViewController+Extras.swift */; };
@@ -70,10 +66,6 @@
 		4C18B4892792906E00363F98 /* RecycPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecycPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C18B48D2792906E00363F98 /* RecycPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycPalUITests.swift; sourceTree = "<group>"; };
 		4C18B48F2792906E00363F98 /* RecycPalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycPalUITestsLaunchTests.swift; sourceTree = "<group>"; };
-		4C72D58C279402F100D30DE1 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
-		4C72D58F279404DC00D30DE1 /* RecycledObjects2.1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = RecycledObjects2.1.mlmodel; path = ../../../Models/RecycledObjects2.1.mlmodel; sourceTree = "<group>"; };
-		4C72D5922794052400D30DE1 /* VNClassificationObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNClassificationObs.swift; sourceTree = "<group>"; };
-		4C72D594279405B800D30DE1 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		4CC24BC9279437DD00352922 /* Camera2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Camera2ViewController.swift; sourceTree = "<group>"; };
 		4CC24BCB2794380700352922 /* CapturedImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CapturedImageView.swift; sourceTree = "<group>"; };
 		4CC24BCD2794382800352922 /* ViewController+Extras.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ViewController+Extras.swift"; sourceTree = "<group>"; };
@@ -178,9 +170,6 @@
 		4C18B46B2792906C00363F98 /* RecycPal */ = {
 			isa = PBXGroup;
 			children = (
-				4C72D5912794050F00D30DE1 /* Extensions */,
-				4C72D58E279404C500D30DE1 /* Model */,
-				4C72D58B279402DE00D30DE1 /* ImagePredictor */,
 				4CC24BD227943CA500352922 /* Models */,
 				070AA55D2793E90A00C87E0D /* ViewModels */,
 				07459C2027938FFE00380AA0 /* Views */,
@@ -212,29 +201,6 @@
 			path = RecycPalUITests;
 			sourceTree = "<group>";
 		};
-		4C72D58B279402DE00D30DE1 /* ImagePredictor */ = {
-			isa = PBXGroup;
-			children = (
-				4C72D58C279402F100D30DE1 /* ImagePredictor.swift */,
-			);
-			path = ImagePredictor;
-			sourceTree = "<group>";
-		};
-		4C72D58E279404C500D30DE1 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				4C72D58F279404DC00D30DE1 /* RecycledObjects2.1.mlmodel */,
-			);
-			path = Model;
-			sourceTree = "<group>";
-		};
-		4C72D5912794050F00D30DE1 /* Extensions */ = {
-			isa = PBXGroup;
-			children = (
-				4C72D5922794052400D30DE1 /* VNClassificationObs.swift */,
-				4C72D594279405B800D30DE1 /* CGImagePropertyOrientation.swift */,
-			);
-			path = Extensions;
 		4CC24BD227943CA500352922 /* Models */ = {
 			isa = PBXGroup;
 			children = (
