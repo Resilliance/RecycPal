@@ -10,6 +10,68 @@ import UIKit
 
 class CameraViewController: UIViewController {
     
+    // Initialize CoreML + Vision variables and constants
+//    let imagePredictor = ImagePredictor()
+    let predictionsToShow = 1
+    
+    private let predictionLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .systemGreen
+        return label
+    }()
+    
+    private let imageView: UIImageView = {
+        let image = UIImageView()
+        return image
+    }()
+    
+    private func updateImage(_ image: UIImage) {
+        DispatchQueue.main.async {
+            self.imageView.image = image
+        }
+    }
+    
+    private func updatePredictionLabel(_ message: String) {
+        DispatchQueue.main.async {
+            self.predictionLabel.text = message
+        }
+    }
+    
+//    private func classifyImage(_ image: UIImage) {
+//        do {
+//            try self.imagePredictor.makePredictions(for: image, completionHandler: imagePredictionHandler)
+//        } catch {
+//            print("Vision was unable to make a prediction...\n\n\(error.localizedDescription)")
+//        }
+//    }
+    
+//    private func imagePredictionHandler(_ predictions: [ImagePredictor.Prediction]?) {
+//        guard let predictions = predictions else {
+//            updatePredictionLabel("No Predictions. (Check console log.)")
+//            return
+//        }
+//        
+//        let formattedPredictions = formatPredictions(predictions)
+//        
+//        let predictionString = formattedPredictions.joined(separator: "\n")
+//        updatePredictionLabel(predictionString)
+//    }
+//    
+//    private func formatPredictions(_ predictions: [ImagePredictor.Prediction]) -> [String] {
+//        let topPredictions: [String] = predictions.prefix(predictionsToShow).map { prediction in
+//            var name = prediction.classification
+//            
+//            if let firstComma = name.firstIndex(of: ",") {
+//                name = String(name.prefix(upTo: firstComma))
+//            }
+//            
+//            return "\(name) - \(prediction.confidencePercentage)%"
+//        }
+//        
+//        return topPredictions
+//    }
+    
+    // Initializing Camera View
     var session: AVCaptureSession?
     let output = AVCapturePhotoOutput()
     let previewLayer = AVCaptureVideoPreviewLayer()
@@ -116,3 +178,5 @@ extension CameraViewController: AVCapturePhotoCaptureDelegate {
         view.addSubview(imageView)
     }
 }
+
+

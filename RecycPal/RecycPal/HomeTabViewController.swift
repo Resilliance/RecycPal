@@ -37,7 +37,7 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
         item1.navigationItem.largeTitleDisplayMode = .automatic
         item1.navigationBar.prefersLargeTitles = true
         
-        let item2 = UINavigationController(rootViewController: CameraViewController())
+        let item2 = UINavigationController(rootViewController: Camera4ViewController())
         let icon2 = UITabBarItem(
             title: "Camera",
             image: UIImage(systemName: "camera"),
