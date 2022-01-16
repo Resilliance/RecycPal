@@ -28,13 +28,23 @@ class CameraViewController: UIViewController {
         
         return button
     }()
+    
+    private let backgroundView: UIView = {
+        let view = UIView()
+        view.layer.cornerRadius = 10
+        return view
+    }()
+    
+    private var previewLayer: AVCaptureVideoPreviewLayer?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = Colors.yellow
+        view.backgroundColor = Colors.green
         
         checkPermission()
         setupCaptureSession()
+        
+        setupBackgroundView()
         
         shutterButton.addTarget(self, action: #selector(didTapTakePhoto), for: .touchUpInside)
         view.addSubview(shutterButton)
@@ -45,11 +55,22 @@ class CameraViewController: UIViewController {
     
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-        
+        previewLayer?.frame = backgroundView.bounds
         shutterButton.center = CGPoint(
             x: view.frame.width / 2,
             y: view.frame.height - (self.tabBarController?.tabBar.frame.height)!
         )
+    }
+    
+    private func setupBackgroundView() {
+        view.addSubview(backgroundView)
+        backgroundView.translatesAutoresizingMaskIntoConstraints = false
+        NSLayoutConstraint.activate([
+            backgroundView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor),
+            backgroundView.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 13),
+            backgroundView.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -13),
+            backgroundView.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -13)
+        ])
     }
     
     private func setupCaptureSession() {
@@ -75,17 +96,22 @@ class CameraViewController: UIViewController {
         
         captureOutput.setSampleBufferDelegate(self, queue: DispatchQueue(label: "videoQueue"))
         
-        let previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
-        previewLayer.frame = view.frame
+        previewLayer = AVCaptureVideoPreviewLayer(session: captureSession)
+        guard let previewLayer = previewLayer else {
+            return
+        }
+
+        previewLayer.frame = backgroundView.frame
         previewLayer.videoGravity = .resizeAspectFill
-        view.layer.addSublayer(previewLayer)
+        previewLayer.cornerRadius = 10
+        backgroundView.layer.addSublayer(previewLayer)
         
         captureSession.startRunning()
     }
     
     private func setupLabel() {
         label.centerXAnchor.constraint(equalTo: view.centerXAnchor).isActive = true
-        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 50).isActive = true
+        label.topAnchor.constraint(equalTo: view.topAnchor, constant: 43).isActive = true
     }
     
     private func checkPermission() {
