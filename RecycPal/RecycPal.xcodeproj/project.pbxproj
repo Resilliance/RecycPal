@@ -22,6 +22,10 @@
 		4C18B4842792906E00363F98 /* RecycPalTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B4832792906E00363F98 /* RecycPalTests.swift */; };
 		4C18B48E2792906E00363F98 /* RecycPalUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B48D2792906E00363F98 /* RecycPalUITests.swift */; };
 		4C18B4902792906E00363F98 /* RecycPalUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C18B48F2792906E00363F98 /* RecycPalUITestsLaunchTests.swift */; };
+		4C72D58D279402F100D30DE1 /* ImagePredictor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D58C279402F100D30DE1 /* ImagePredictor.swift */; };
+		4C72D590279404DC00D30DE1 /* RecycledObjects2.1.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D58F279404DC00D30DE1 /* RecycledObjects2.1.mlmodel */; };
+		4C72D5932794052400D30DE1 /* VNClassificationObs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D5922794052400D30DE1 /* VNClassificationObs.swift */; };
+		4C72D595279405B800D30DE1 /* CGImagePropertyOrientation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4C72D594279405B800D30DE1 /* CGImagePropertyOrientation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +66,10 @@
 		4C18B4892792906E00363F98 /* RecycPalUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RecycPalUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4C18B48D2792906E00363F98 /* RecycPalUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycPalUITests.swift; sourceTree = "<group>"; };
 		4C18B48F2792906E00363F98 /* RecycPalUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecycPalUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		4C72D58C279402F100D30DE1 /* ImagePredictor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePredictor.swift; sourceTree = "<group>"; };
+		4C72D58F279404DC00D30DE1 /* RecycledObjects2.1.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; name = RecycledObjects2.1.mlmodel; path = ../../../Models/RecycledObjects2.1.mlmodel; sourceTree = "<group>"; };
+		4C72D5922794052400D30DE1 /* VNClassificationObs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VNClassificationObs.swift; sourceTree = "<group>"; };
+		4C72D594279405B800D30DE1 /* CGImagePropertyOrientation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGImagePropertyOrientation.swift; sourceTree = "<group>"; };
 		96F0BD82DE49E181002A70BB /* libPods-RecycPal.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RecycPal.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +167,9 @@
 		4C18B46B2792906C00363F98 /* RecycPal */ = {
 			isa = PBXGroup;
 			children = (
+				4C72D5912794050F00D30DE1 /* Extensions */,
+				4C72D58E279404C500D30DE1 /* Model */,
+				4C72D58B279402DE00D30DE1 /* ImagePredictor */,
 				070AA55D2793E90A00C87E0D /* ViewModels */,
 				07459C2027938FFE00380AA0 /* Views */,
 				07459C1D2793817100380AA0 /* Utilities */,
@@ -187,6 +198,31 @@
 				4C18B48F2792906E00363F98 /* RecycPalUITestsLaunchTests.swift */,
 			);
 			path = RecycPalUITests;
+			sourceTree = "<group>";
+		};
+		4C72D58B279402DE00D30DE1 /* ImagePredictor */ = {
+			isa = PBXGroup;
+			children = (
+				4C72D58C279402F100D30DE1 /* ImagePredictor.swift */,
+			);
+			path = ImagePredictor;
+			sourceTree = "<group>";
+		};
+		4C72D58E279404C500D30DE1 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				4C72D58F279404DC00D30DE1 /* RecycledObjects2.1.mlmodel */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4C72D5912794050F00D30DE1 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				4C72D5922794052400D30DE1 /* VNClassificationObs.swift */,
+				4C72D594279405B800D30DE1 /* CGImagePropertyOrientation.swift */,
+			);
+			path = Extensions;
 			sourceTree = "<group>";
 		};
 		4E839EF1F2178329AEE7E8DB /* Pods */ = {
@@ -363,13 +399,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4C72D5932794052400D30DE1 /* VNClassificationObs.swift in Sources */,
 				4C18B4712792906C00363F98 /* HomeTabViewController.swift in Sources */,
 				07459C1A2793345500380AA0 /* CameraViewController.swift in Sources */,
 				4C18B46D2792906C00363F98 /* AppDelegate.swift in Sources */,
 				07459C23279390AE00380AA0 /* CustomTableViewCell.swift in Sources */,
+				4C72D590279404DC00D30DE1 /* RecycledObjects2.1.mlmodel in Sources */,
+				4C72D58D279402F100D30DE1 /* ImagePredictor.swift in Sources */,
 				070AA55F2793E92B00C87E0D /* Material.swift in Sources */,
 				07459C1C2793345E00380AA0 /* InfoViewController.swift in Sources */,
 				070AA5612793FC5700C87E0D /* MoreInfoViewController.swift in Sources */,
+				4C72D595279405B800D30DE1 /* CGImagePropertyOrientation.swift in Sources */,
 				07459C182793344A00380AA0 /* HistoryViewController.swift in Sources */,
 				07459C1F2793819D00380AA0 /* Constants.swift in Sources */,
 			);
@@ -544,9 +584,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LG7N2H9LJ;
+				DEVELOPMENT_TEAM = 8Q9JTWJ9HG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecycPal/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -556,7 +597,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.deltahacks;
+				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -574,9 +615,10 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 2LG7N2H9LJ;
+				DEVELOPMENT_TEAM = 8Q9JTWJ9HG;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = RecycPal/Info.plist;
+				INFOPLIST_KEY_NSCameraUsageDescription = "Please allow to take photos";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -586,7 +628,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.deltahacks;
+				PRODUCT_BUNDLE_IDENTIFIER = JKE.RecycPal.123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
