@@ -14,6 +14,13 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
         delegate = self
         self.tabBar.unselectedItemTintColor = UIColor.white
         self.tabBar.barTintColor = Colors.green
+        self.tabBar.backgroundColor = Colors.green
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        tabBar.frame.size.height = view.frame.height / 10
+        tabBar.frame.origin.y = view.frame.height - view.frame.height / 10
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -51,6 +58,7 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
         
         let controllers = [item1, item2, item3]
         self.viewControllers = controllers
+        self.selectedIndex = 1
     }
     
     func tabBarController(_ tabBarController: UITabBarController, shouldSelect viewController: UIViewController) -> Bool {

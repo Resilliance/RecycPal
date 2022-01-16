@@ -24,6 +24,7 @@ class HistoryViewController: UITableViewController {
         self.navigationController?.navigationBar.layoutIfNeeded()
         
         tableView.backgroundColor = .clear
+        tableView.separatorColor = .clear
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 30
         }
