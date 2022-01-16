@@ -88,14 +88,34 @@ class HistoryViewController: UITableViewController {
             print("Something went wrong with CustomTableViewCell")
             return UITableViewCell()
         }
+        
+        if indexPath.section == 0 {
+            cell.cellContentButton.configuration = setUpButtonConfig(
+                title: "Find Your Nearest Recycling Center",
+                image: UIImage(named: "location")!
+            )
+            
+            cell.selectCellHandler = {
+                if let url = URL(
+                    string: "https://search.earth911.com/?utm_source=earth911-header"
+                ) {
+                    UIApplication.shared.open(url as URL, options:[:], completionHandler:nil)
+                }
+            }
+        } else {
+            var buttonConfig = UIButton.Configuration.filled()
+            buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
+            buttonConfig.background.backgroundColor = Colors.yellow
+            buttonConfig.cornerStyle = .medium
+            
+            cell.cellContentButton.configuration = buttonConfig
+            
+            cell.selectCellHandler = {
+                print("TODO - Implement previous pictures")
+            }
+        }
+        
         cell.backgroundColor = Colors.green
-        
-        var buttonConfig = UIButton.Configuration.filled()
-        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
-        buttonConfig.background.backgroundColor = Colors.yellow
-        buttonConfig.cornerStyle = .medium
-        
-        cell.cellContentButton.configuration = buttonConfig
         return cell
     }
     
@@ -106,5 +126,23 @@ class HistoryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.bounds.height / 5
+    }
+    
+    private func setUpButtonConfig(title: String, image: UIImage) -> UIButton.Configuration {
+        var buttonConfig = UIButton.Configuration.filled()
+        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
+        buttonConfig.background.backgroundColor = Colors.yellow
+        buttonConfig.cornerStyle = .medium
+        buttonConfig.imagePlacement = .leading
+        buttonConfig.image = image
+        
+        let attributes = AttributeContainer(
+            [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+             NSAttributedString.Key.foregroundColor: Colors.green]
+        )
+        buttonConfig.attributedTitle = AttributedString(title, attributes: attributes)
+        
+        buttonConfig.imagePadding = 40
+        return buttonConfig
     }
 }
