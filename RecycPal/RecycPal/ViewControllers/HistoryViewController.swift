@@ -59,7 +59,7 @@ class HistoryViewController: UITableViewController {
         if section == 0 {
             return 1
         } else {
-            return 10
+            return 1
         }
     }
     
@@ -103,16 +103,11 @@ class HistoryViewController: UITableViewController {
                 }
             }
         } else {
-            var buttonConfig = UIButton.Configuration.filled()
-            buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
-            buttonConfig.background.backgroundColor = Colors.yellow
-            buttonConfig.cornerStyle = .medium
-            
-            cell.cellContentButton.configuration = buttonConfig
-            
-            cell.selectCellHandler = {
-                print("TODO - Implement previous pictures")
-            }
+            cell.cellContentButton.configuration = setUpButtonConfig(
+                title: "Oops!\n\nYou don't have any saved pictures. Please try taking one with the camera!",
+                image: UIImage(named: "AppIcon")!
+            )
+            cell.cellContentButton.isEnabled = false
         }
         
         cell.backgroundColor = Colors.green
