@@ -73,8 +73,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="ellipse" width="736" height="712"/>
-        <image name="logo2" width="1512" height="1980"/>
+        <image name="ellipse" width="178" height="173"/>
+        <image name="logo" width="136" height="150"/>
         <namedColor name="Green">
             <color red="0.31764705882352939" green="0.63921568627450975" blue="0.53333333333333333" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
