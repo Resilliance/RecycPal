@@ -33,7 +33,7 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
             selectedImage: UIImage(systemName: "books.vertical.fill")
         )
         item1.tabBarItem = icon1
-        item1.navigationItem.largeTitleDisplayMode = .always
+        item1.navigationItem.largeTitleDisplayMode = .automatic
         item1.navigationBar.prefersLargeTitles = true
         
         let item2 = UINavigationController(rootViewController: CameraViewController())
@@ -43,17 +43,17 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
             selectedImage: UIImage(systemName: "camera.fill")
         )
         item2.tabBarItem = icon2
-        item2.navigationItem.largeTitleDisplayMode = .always
+        item2.navigationItem.largeTitleDisplayMode = .automatic
         item2.navigationBar.prefersLargeTitles = true
         
-        let item3 = UINavigationController(rootViewController: InfoViewController())
+        let item3 = UINavigationController(rootViewController: InfoViewController(style: .grouped))
         let icon3 = UITabBarItem(
             title: "Info",
             image: UIImage(systemName: "info.circle"),
             selectedImage: UIImage(systemName: "info.circle.fill")
         )
         item3.tabBarItem = icon3
-        item3.navigationItem.largeTitleDisplayMode = .always
+        item3.navigationItem.largeTitleDisplayMode = .automatic
         item3.navigationBar.prefersLargeTitles = true
         
         let controllers = [item1, item2, item3]

@@ -89,7 +89,14 @@ class HistoryViewController: UITableViewController {
             return UITableViewCell()
         }
         cell.backgroundColor = .clear
-      return cell
+        
+        var buttonConfig = UIButton.Configuration.filled()
+        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
+        buttonConfig.background.backgroundColor = Colors.yellow
+        buttonConfig.cornerStyle = .medium
+        
+        cell.cellContentButton.configuration = buttonConfig
+        return cell
     }
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
