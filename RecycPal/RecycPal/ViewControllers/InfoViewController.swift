@@ -140,7 +140,7 @@ class InfoViewController: UITableViewController {
         buttonConfig.image = material.image
         
         let attributes = AttributeContainer(
-            [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 50),
+            [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 40),
              NSAttributedString.Key.foregroundColor: Colors.green]
         )
         buttonConfig.attributedTitle = AttributedString(material.title, attributes: attributes)
