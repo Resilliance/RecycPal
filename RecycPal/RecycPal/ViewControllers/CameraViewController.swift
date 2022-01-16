@@ -102,7 +102,7 @@ class CameraViewController: UIViewController {
         
         shutterButton.center = CGPoint(
             x: view.frame.width / 2,
-            y: view.frame.height - 175
+            y: view.frame.height - (self.tabBarController?.tabBar.frame.height)!
         )
     }
     

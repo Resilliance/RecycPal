@@ -15,6 +15,7 @@ class HomeTabViewController: UITabBarController, UITabBarControllerDelegate {
         self.tabBar.unselectedItemTintColor = UIColor.white
         self.tabBar.barTintColor = Colors.green
         self.tabBar.backgroundColor = Colors.green
+        self.tabBar.isTranslucent = false
     }
     
     override func viewDidLayoutSubviews() {

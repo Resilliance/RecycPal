@@ -23,8 +23,8 @@ class HistoryViewController: UITableViewController {
         self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
         self.navigationController?.navigationBar.layoutIfNeeded()
         
-        tableView.backgroundColor = .clear
-        tableView.separatorColor = .clear
+        tableView.backgroundColor = Colors.green
+        tableView.separatorColor = Colors.green
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 30
         }
@@ -59,7 +59,7 @@ class HistoryViewController: UITableViewController {
         if section == 0 {
             return 1
         } else {
-            return 10
+            return 1
         }
     }
     
@@ -88,14 +88,30 @@ class HistoryViewController: UITableViewController {
             print("Something went wrong with CustomTableViewCell")
             return UITableViewCell()
         }
-        cell.backgroundColor = .clear
         
-        var buttonConfig = UIButton.Configuration.filled()
-        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
-        buttonConfig.background.backgroundColor = Colors.yellow
-        buttonConfig.cornerStyle = .medium
+        if indexPath.section == 0 {
+            cell.cellContentButton.configuration = setUpButtonConfig(
+                title: "Find Your Nearest Recycling Center",
+                image: UIImage(named: "location")!
+            )
+            
+            cell.selectCellHandler = {
+                if let url = URL(
+                    string: "https://search.earth911.com/?utm_source=earth911-header"
+                ) {
+                    UIApplication.shared.open(url as URL, options:[:], completionHandler:nil)
+                }
+            }
+            cell.cellContentButton.isEnabled = true
+        } else {
+            cell.cellContentButton.configuration = setUpButtonConfig(
+                title: "Oops!\n\nYou don't have any saved pictures. Please try taking one with the camera!",
+                image: UIImage(named: "AppIcon")!
+            )
+            cell.cellContentButton.isEnabled = false
+        }
         
-        cell.cellContentButton.configuration = buttonConfig
+        cell.backgroundColor = Colors.green
         return cell
     }
     
@@ -106,5 +122,23 @@ class HistoryViewController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return view.bounds.height / 5
+    }
+    
+    private func setUpButtonConfig(title: String, image: UIImage) -> UIButton.Configuration {
+        var buttonConfig = UIButton.Configuration.filled()
+        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
+        buttonConfig.background.backgroundColor = Colors.yellow
+        buttonConfig.cornerStyle = .medium
+        buttonConfig.imagePlacement = .leading
+        buttonConfig.image = image
+        
+        let attributes = AttributeContainer(
+            [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+             NSAttributedString.Key.foregroundColor: Colors.green]
+        )
+        buttonConfig.attributedTitle = AttributedString(title, attributes: attributes)
+        
+        buttonConfig.imagePadding = 40
+        return buttonConfig
     }
 }
