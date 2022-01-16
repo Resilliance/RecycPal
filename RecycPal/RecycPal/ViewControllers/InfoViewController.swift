@@ -103,12 +103,18 @@ class InfoViewController: UITableViewController {
             return UITableViewCell()
         }
         if indexPath.section == 0 {
-            var buttonConfig = UIButton.Configuration.filled()
-            buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
-            buttonConfig.background.backgroundColor = Colors.yellow
-            buttonConfig.cornerStyle = .medium
+            cell.cellContentButton.configuration = setUpButtonConfig(
+                title: "Find Your Nearest Recycling Center",
+                image: UIImage(named: "location")!
+            )
             
-            cell.cellContentButton.configuration = buttonConfig
+            cell.selectCellHandler = {
+                if let url = URL(
+                    string: "https://search.earth911.com/?utm_source=earth911-header"
+                ) {
+                    UIApplication.shared.open(url as URL, options:[:], completionHandler:nil)
+                }
+            }
         } else {
             let material = materials[indexPath.row]
             
@@ -151,6 +157,24 @@ class InfoViewController: UITableViewController {
              NSAttributedString.Key.foregroundColor: Colors.green]
         )
         buttonConfig.attributedTitle = AttributedString(material.title, attributes: attributes)
+        
+        buttonConfig.imagePadding = 40
+        return buttonConfig
+    }
+    
+    private func setUpButtonConfig(title: String, image: UIImage) -> UIButton.Configuration {
+        var buttonConfig = UIButton.Configuration.filled()
+        buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)
+        buttonConfig.background.backgroundColor = Colors.yellow
+        buttonConfig.cornerStyle = .medium
+        buttonConfig.imagePlacement = .leading
+        buttonConfig.image = image
+        
+        let attributes = AttributeContainer(
+            [NSAttributedString.Key.font: UIFont.boldSystemFont(ofSize: 18),
+             NSAttributedString.Key.foregroundColor: Colors.green]
+        )
+        buttonConfig.attributedTitle = AttributedString(title, attributes: attributes)
         
         buttonConfig.imagePadding = 40
         return buttonConfig
