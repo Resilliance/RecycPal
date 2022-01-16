@@ -23,8 +23,8 @@ class HistoryViewController: UITableViewController {
         self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
         self.navigationController?.navigationBar.layoutIfNeeded()
         
-        tableView.backgroundColor = .clear
-        tableView.separatorColor = .clear
+        tableView.backgroundColor = Colors.green
+        tableView.separatorColor = Colors.green
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 30
         }
@@ -88,7 +88,7 @@ class HistoryViewController: UITableViewController {
             print("Something went wrong with CustomTableViewCell")
             return UITableViewCell()
         }
-        cell.backgroundColor = .clear
+        cell.backgroundColor = Colors.green
         
         var buttonConfig = UIButton.Configuration.filled()
         buttonConfig.contentInsets = NSDirectionalEdgeInsets(top: 0, leading: 25, bottom: 0, trailing: 25)

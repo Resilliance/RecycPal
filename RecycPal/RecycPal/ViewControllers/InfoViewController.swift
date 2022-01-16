@@ -19,17 +19,10 @@ class InfoViewController: UITableViewController {
         super.viewDidLoad()
         title = "Information"
         
-        let appearance = UINavigationBarAppearance()
-        appearance.configureWithOpaqueBackground()
-        appearance.backgroundColor = Colors.green
-        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
-        appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 35)]
-        appearance.shadowColor = .clear
-        self.navigationController?.navigationBar.standardAppearance = appearance
-        self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
-        self.navigationController?.navigationBar.layoutIfNeeded()
+        setNavBarAppearance()
         
-        tableView.backgroundColor = .clear
+        tableView.backgroundColor = Colors.green
+        tableView.separatorColor = Colors.green
         if #available(iOS 15.0, *) {
             tableView.sectionHeaderTopPadding = 30
         }
@@ -42,6 +35,8 @@ class InfoViewController: UITableViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
+        self.navigationController?.navigationBar.prefersLargeTitles = true
+        setNavBarAppearance()
     }
     
     override func viewDidAppear(_ animated: Bool) {
@@ -53,6 +48,18 @@ class InfoViewController: UITableViewController {
     
     private func registerCustomCells() {
         tableView.register(CustomTableViewCell.self, forCellReuseIdentifier: CustomTableViewCell.identifier)
+    }
+    
+    private func setNavBarAppearance() {
+        let appearance = UINavigationBarAppearance()
+        appearance.configureWithOpaqueBackground()
+        appearance.backgroundColor = Colors.green
+        appearance.largeTitleTextAttributes = [.foregroundColor: UIColor.white]
+        appearance.titleTextAttributes = [.foregroundColor: UIColor.white, .font: UIFont.boldSystemFont(ofSize: 35)]
+        appearance.shadowColor = .clear
+        self.navigationController?.navigationBar.standardAppearance = appearance
+        self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
+        self.navigationController?.navigationBar.layoutIfNeeded()
     }
 
     // MARK: Table View Methods
@@ -116,7 +123,7 @@ class InfoViewController: UITableViewController {
                 self.navigationController?.pushViewController(vc, animated: true)
             }
         }
-        cell.backgroundColor = .clear
+        cell.backgroundColor = Colors.green
         return cell
     }
     

@@ -22,5 +22,7 @@ class MoreInfoViewController: UIViewController {
         self.navigationController?.navigationBar.standardAppearance = appearance
         self.navigationController?.navigationBar.scrollEdgeAppearance = self.navigationController?.navigationBar.standardAppearance
         self.navigationController?.navigationBar.layoutIfNeeded()
+        
+        view.backgroundColor = Colors.green
     }
 }
