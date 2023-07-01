@@ -1,0 +1,76 @@
+#:kivy 2.2.1
+
+
+<RecycpalHistory>:
+	md_bg_color: 0.396,0.627,0.537,1
+	ScrollView:
+		pos_hint:{'center_x':0.5}
+		BoxLayout:
+			id:images_box
+			orientation:'vertical'
+			size_hint_y: None
+			height: self.minimum_height
+
+
+		
+
+<RecycpalCamera>:
+	orientation: 'vertical'
+	Camera:
+		id: camera
+		resolution: (1080,1920)
+		play: True
+		allow_stretch:True
+	MDFillRoundFlatButton:
+		text: "Scan"
+		theme_text_color: "Custom"
+		text_color: 0.396,0.627,0.537,2
+		md_bg_color: 1,1,1,1
+		opacity: 0.8
+		size_hint: 0.2,0.1
+		pos_hint: {'center_x': 0.5,'center_y': 0.10}
+		on_press: root.capture()
+		
+
+<RecycpalInfo>:
+	md_bg_color: 0.396,0.627,0.537,1	
+	MDLabel:
+		text: "Information"
+		halign: "center"
+
+BoxLayout:
+	orientation: 'vertical'
+
+
+
+	MDBottomNavigation:
+		panel_color:"#65A089"
+		#selected_color_background: "#F7FFE5"
+		text_color_active: "lightgrey"
+
+		MDBottomNavigationItem:
+			name: 'History'
+			text: 'History'
+			icon: 'filter'
+			
+			ScreenManager:
+				id: history
+
+
+		MDBottomNavigationItem:
+			name: 'Camera'
+			text: 'Camera'
+			icon: 'camera'
+			
+			ScreenManager:
+				id: camera
+				RecycpalCamera:
+					name: "camera_screen"
+
+		MDBottomNavigationItem:
+			name: 'Info'
+			text: 'Info'
+			icon: 'book'
+			
+			ScreenManager:
+				id: info
