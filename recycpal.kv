@@ -1,36 +1,88 @@
 #:kivy 2.2.1
 
+<RecycpalHistoryDetailView>:
+	name: "Detail"
+	md_bg_color: 0.396,0.627,0.537,1
+	orientation:'vertical'
+	MDBoxLayout:
+		orientation:'vertical'
+		md_bg_color: 0.396,0.627,0.537,1
+		MDTopAppBar:
+			left_action_items: [["arrow-left", lambda x: app.back_to_history()]]
+			md_bg_color:0.396,0.627,0.537,1 
+			elevation:0
+			pos_hint:{'center_x':0.5,'center_y':0.96} 
+		ScrollView:
+			id: detail_screen
+			padding: dp(5)
+			do_scroll_x: False
+			canvas.before:
+				Color:
+					rgba: (0.396,0.627,0.537,1)
+					# rgba: (1,0,0,1)
+				Rectangle:
+					pos: self.pos
+					size: self.size
+			MDGridLayout:
+				id: detail_box
+				cols:1
+				padding: dp(10)
+				minimum_height: self.minimum_height
+				size_hint_y: 1.5
+		
 
 <RecycpalHistory>:
+	name: "RecycpalHistory"
 	md_bg_color: 0.396,0.627,0.537,1
 	ScrollView:
-		pos_hint:{'center_x':0.5}
+		id:history_screen
 		BoxLayout:
 			id:images_box
 			orientation:'vertical'
+			spacing: 10
 			size_hint_y: None
+			padding:dp(20)
 			height: self.minimum_height
-
 
 		
 
 <RecycpalCamera>:
 	orientation: 'vertical'
-	Camera:
-		id: camera
-		resolution: (1080,1920)
-		play: True
-		allow_stretch:True
-	MDFillRoundFlatButton:
-		text: "Scan"
-		theme_text_color: "Custom"
-		text_color: 0.396,0.627,0.537,2
-		md_bg_color: 1,1,1,1
-		opacity: 0.8
-		size_hint: 0.2,0.1
-		pos_hint: {'center_x': 0.5,'center_y': 0.10}
-		on_press: root.capture()
-		
+	FloatLayout:
+		id: camera_screen
+		padding: dp(5)
+		canvas.before:
+			Color:
+				rgba: (0.396,0.627,0.537,1)
+			Rectangle:
+				pos: self.pos
+				size: self.size
+		BoxLayout:
+			padding: dp(15)
+			size_hint: (0.9,0.9)
+			pos_hint: {'center_x':0.5, 'center_y':0.5}
+			canvas.before:
+				Color:
+					rgba: (0.894,0.890,0.667,1)
+				RoundedRectangle:
+                    pos: self.pos
+                    size: self.size
+					radius: [15,]
+			BoxLayout:
+				id: camera_box
+				Camera:
+					id: camera
+					resolution: (1080,1920)
+					play: True
+					allow_stretch:True
+
+		MDFloatingActionButton:
+			id: capture_button
+			md_bg_color:0.396,0.627,0.537,2 
+			user_font_size: "60sp"
+			pos_hint: {'center_x': 0.5,'center_y': 0.15}
+			on_release: root.capture()
+
 
 <RecycpalInfo>:
 	md_bg_color: 0.396,0.627,0.537,1	
@@ -53,8 +105,10 @@ BoxLayout:
 			text: 'History'
 			icon: 'filter'
 			
-			ScreenManager:
+			MDScreenManager:
 				id: history
+				play: False
+
 
 
 		MDBottomNavigationItem:
@@ -62,7 +116,7 @@ BoxLayout:
 			text: 'Camera'
 			icon: 'camera'
 			
-			ScreenManager:
+			MDScreenManager:
 				id: camera
 				RecycpalCamera:
 					name: "camera_screen"
@@ -72,5 +126,6 @@ BoxLayout:
 			text: 'Info'
 			icon: 'book'
 			
-			ScreenManager:
+			MDScreenManager:
 				id: info
+				play:False
