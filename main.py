@@ -2,6 +2,7 @@ from kivymd.app import MDApp
 from kivy.lang import Builder
 from kivy.uix.label import Label
 from kivy.uix.pagelayout import PageLayout
+from kivy.uix.behaviors import ButtonBehavior
 from kivymd.uix.boxlayout import MDBoxLayout
 # from kivymd.uix.toolbar import MDTopAppBar
 from kivymd.uix.label import MDLabel
@@ -27,6 +28,26 @@ import pandas
 import psutil
 import numpy as np
 from ultralytics import YOLO
+
+class RecycpalClickableLabel(ButtonBehavior, MDLabel):
+    """
+
+    TLDR; Make labels clickable; use RecycpalClickableLabel instead of MDLabel in KV
+
+    RecycpalClickableLabel was created because the KivyMD 'MDTopAppBar'
+    didn't have functionality to have an icon immediately followed by 
+    text. Like a back button that has text saying where it's going back to
+
+    Example:
+        Enter a RecycpalHistoryDetailView and look at the back button.
+        MDTopAppBar would not allow us to have 'History' immediately
+        following the icon
+    
+    To combat this lack of functionality, we had to create a class that
+    inherited from both ButtonBehavior and MDLabel, this giving this class
+    in the KV file functionality of both Labels and Buttons. 
+    """
+    pass
 
 class RecycpalHistoryDetailView(MDScreen):
     directory = None
@@ -99,7 +120,7 @@ class RecycpalCamera(MDScreen):
             directory = join(MDApp.get_running_app().user_data_dir, "IMG_{}.png".format(time_start))
         else:
             # On desktop platforms, you could use the current directory or any directory you have permissions for
-            directory = "IMG_{}.png".format(time_start)
+            directory = "data/images/IMG_{}.png".format(time_start)
         camera.export_to_png(directory)
         image = cv2.imread(directory)
         results = RecycpalApp.model(directory)
@@ -126,8 +147,6 @@ class RecycpalCamera(MDScreen):
                 cv2.fillPoly(mask, [points], color=color)
 
                 # Add current mask to final mask
-                print(final_mask.shape)
-                print(mask.shape)
                 final_mask += mask
 
             # Convert image to RGB
@@ -145,7 +164,7 @@ class RecycpalCamera(MDScreen):
                 text = detection['name']
                 cv2.putText(blended_image, text, (x[0],y[0] - 10), cv2.FONT_HERSHEY_SIMPLEX, 1, color, 2)
 
-            # Overwrite the directory
+            # Overwrite vanilla image
             cv2.imwrite(directory,cv2.cvtColor(blended_image,cv2.COLOR_RGB2BGR))
                 
             image = Image(source=directory)
@@ -187,8 +206,14 @@ class RecycpalCamera(MDScreen):
         print('save\n',directory)
         # Add image directory to the captured_images array
         RecycpalApp.get_running_app().captured_images.append(directory)
+        # Load existing data
+        existing_data = RecycpalApp.get_running_app().load_image_paths()
+
+        # Update directory data
+        existing_data['directory'] = RecycpalApp.get_running_app().captured_images
+
         with open('image_paths.json','w') as file:
-            json.dump(RecycpalApp.get_running_app().captured_images,file)
+            json.dump(existing_data,file)
 
         # Remove Image and Save/Discard widgets
         self.ids['camera_box'].remove_widget(self.widgets['image'])
@@ -219,6 +244,10 @@ class RecycpalCamera(MDScreen):
         self.ids['camera_screen'].add_widget(self.ids['capture_button'])
 
 class RecycpalInfo(MDScreen):
+    """
+    NOTE: Reminder to eventually make the Cards in the info screen
+    dynamically populate instead of statically
+    """
     pass
 
 class RecycpalApp(MDApp):       
@@ -227,12 +256,9 @@ class RecycpalApp(MDApp):
     # Call previous images taken
     def __init__(self, **kwargs):
         super().__init__(**kwargs)
-        self.captured_images = self.load_image_paths()
+        self.captured_images = self.load_image_paths()['directory']
 
     def build(self):
-        # Loading in YOLOv5 Model
-        self.root = Builder.load_file('recycpal.kv')
-
         self.theme_cls.material_style = "M3"
         self.theme_cls.theme_style = "Dark"
 
@@ -253,8 +279,7 @@ class RecycpalApp(MDApp):
             with open('image_paths.json','r') as file:
                 return json.load(file)
         except FileNotFoundError:
-            return []
-        
+            return {"directory": []}
     def open_card(self,directory):
         print("\n\n",directory)
         self.root.ids.history.get_screen('Detail').set_directory(directory)
@@ -267,6 +292,10 @@ class RecycpalApp(MDApp):
         self.root.ids.history.transition = MDSlideTransition(direction="right")
         self.root.ids.history.get_screen('History').on_enter()
         self.root.ids.history.current = "History"
+
+    def back_to_info(self):
+        # self.root.ids.info.get_screen('Paper')
+        pass
 
 
 RecycpalApp().run()

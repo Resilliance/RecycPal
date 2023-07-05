@@ -7,11 +7,22 @@
 	MDBoxLayout:
 		orientation:'vertical'
 		md_bg_color: 0.396,0.627,0.537,1
-		MDTopAppBar:
-			left_action_items: [["arrow-left", lambda x: app.back_to_history()]]
-			md_bg_color:0.396,0.627,0.537,1 
-			elevation:0
-			pos_hint:{'center_x':0.5,'center_y':0.96} 
+		MDBoxLayout:
+			orientation: 'horizontal'
+			padding:"16dp"
+			size_hint_y: None
+			height:"56dp"
+			MDIconButton:
+				icon:"arrow-left"
+				pos_hint: {'center_y':0.5}
+				on_release: app.back_to_history()
+			RecycpalClickableLabel:
+				text: "History"
+				text_color: "white"
+				pos_hint: {'center_y':0.5}
+				font_style: "H5"
+				on_release: app.back_to_history()
+ 
 		ScrollView:
 			id: detail_screen
 			padding: dp(5)
@@ -85,10 +96,161 @@
 
 
 <RecycpalInfo>:
-	md_bg_color: 0.396,0.627,0.537,1	
-	MDLabel:
-		text: "Information"
-		halign: "center"
+	md_bg_color: 0.396,0.627,0.537,1
+	name: "RecycpalInfo"
+	MDBoxLayout:
+		id: info_screen	
+		orientation: 'vertical'
+
+		MDBoxLayout:
+			md_bg_color: 0.396,0.627,0.537,1
+			# md_bg_color: 1,0,0,1
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: "56dp"
+			padding: [0,"20dp",0,0]
+			MDLabel:
+				padding: dp(15)
+				markup: True
+				text: "Information"
+				font_style: "H3"
+		# Map Section
+		MDBoxLayout:
+			id: info_maps
+			md_bg_color: 0.396,0.627,0.537,1
+			# md_bg_color: 0,1,0,1
+			size_hint: (1,0.2)
+			# cols: 1
+			padding:dp(15)
+			MDCard:
+				size_hint: (1,None)
+				# pos_hint:{'center_y':0.5}
+				md_bg_color: (0.894, 0.890, 0.667, 1)
+				MDBoxLayout:
+					orientation: 'horizontal'
+					Image: 
+						source: "staticfiles/images/navigator.png"
+						size_hint: (0.4,0.85)
+						pos_hint: {'center_x':0.5,'center_y':0.5}
+					MDLabel:
+						markup: True
+						text: "Find your nearest Recycling Center"
+						size_hint: (0.8,1)
+						pos_hint: {'center_x':0.6}
+						text_color: 0,0,0,1
+						font_style: "H4"
+		
+		# Materials Section Label
+		MDBoxLayout:
+			md_bg_color: 0.396,0.627,0.537,1
+			# md_bg_color: 1,0,0,1
+			orientation: 'horizontal'
+			size_hint_y: None
+			height: "56dp"
+			# padding: [0,"25dp","15dp",0]
+			MDLabel:
+				padding: dp(15)
+				markup: True
+				text: "Materials"
+				font_style: "H3"
+
+		# Materials Section
+		ScrollView:
+			id: info_scroll
+			orientation: 'vertical'
+			MDBoxLayout:
+				id: info_box
+				orientation: 'vertical'
+				size_hint_y: None
+				height: self.minimum_height
+				padding: dp(15)
+				spacing: 10
+				MDCard:
+					size_hint: (1,None)
+					md_bg_color: (0.894, 0.890, 0.667, 1)
+					MDBoxLayout:
+						orientation: 'horizontal'
+						Image: 
+							source: "staticfiles/images/glass.png"
+							size_hint: (0.4,0.85)
+							pos_hint: {'center_x':0.5,'center_y':0.5}
+						MDLabel:
+							markup: True
+							text: "Glass"
+							size_hint: (0.8,1)
+							pos_hint: {'center_x':0.6}
+							text_color: 0,0,0,1
+							font_style: "H3"
+				
+				MDCard:
+					size_hint: (1,None)
+					md_bg_color: (0.894, 0.890, 0.667, 1)
+					MDBoxLayout:
+						orientation: 'horizontal'
+						Image: 
+							source: "staticfiles/images/plastic.png"
+							size_hint: (0.4,0.85)
+							pos_hint: {'center_x':0.5,'center_y':0.5}
+						MDLabel:
+							markup: True
+							text: "Plastic"
+							size_hint: (0.8,1)
+							pos_hint: {'center_x':0.6}
+							text_color: 0,0,0,1
+							font_style: "H3"
+
+				MDCard:
+					size_hint: (1,None)
+					md_bg_color: (0.894, 0.890, 0.667, 1)
+					MDBoxLayout:
+						orientation: 'horizontal'
+						Image: 
+							source: "staticfiles/images/cardboard.png"
+							size_hint: (0.4,0.85)
+							pos_hint: {'center_x':0.5,'center_y':0.5}
+						MDLabel:
+							markup: True
+							text: "Cardboard"
+							size_hint: (0.8,1)
+							pos_hint: {'center_x':0.6}
+							text_color: 0,0,0,1
+							font_style: "H3"
+
+				MDCard:
+					size_hint: (1,None)
+					md_bg_color: (0.894, 0.890, 0.667, 1)
+					MDBoxLayout:
+						orientation: 'horizontal'
+						Image: 
+							source: "staticfiles/images/paper.png"
+							size_hint: (0.4,0.85)
+							pos_hint: {'center_x':0.5,'center_y':0.5}
+						MDLabel:
+							markup: True
+							text: "Paper"
+							size_hint: (0.8,1)
+							pos_hint: {'center_x':0.6}
+							text_color: 0,0,0,1
+							font_style: "H3"
+
+				MDCard:
+					size_hint: (1,None)
+					md_bg_color: (0.894, 0.890, 0.667, 1)
+					MDBoxLayout:
+						orientation: 'horizontal'
+						Image: 
+							source: "staticfiles/images/trash.png"
+							size_hint: (0.4,0.85)
+							pos_hint: {'center_x':0.5,'center_y':0.5}
+						MDLabel:
+							markup: True
+							text: "Trash"
+							size_hint: (0.8,1)
+							pos_hint: {'center_x':0.6}
+							text_color: 0,0,0,1
+							font_style: "H3"
+
+
 
 BoxLayout:
 	orientation: 'vertical'
