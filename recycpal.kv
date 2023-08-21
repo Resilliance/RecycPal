@@ -1,5 +1,51 @@
 #:kivy 2.2.1
 
+
+# <RecycpalMapView>:
+# 	name: "Maps"
+# 	md_bg_color: 0.396,0.627,0.537,1
+
+	
+<RecycpalInfoDetailView>:
+	name: "Material"
+	md_bg_color: 0.396,0.627,0.537,1
+	orientation: 'vertical'
+	MDBoxLayout:
+		orientation:'vertical'
+		md_bg_color: 0.396,0.627,0.537,1
+		MDBoxLayout:
+			orientation: 'horizontal'
+			padding:"16dp"
+			size_hint_y: None
+			height:"56dp"
+			MDIconButton:
+				icon:"arrow-left"
+				pos_hint: {'center_y':0.5}
+				on_release: app.back_to_info()
+			RecycpalClickableLabel:
+				text: "Information"
+				text_color: "white"
+				pos_hint: {'center_y':0.5}
+				font_style: "H5"
+				on_release: app.back_to_info()
+		ScrollView:
+			id:material_scroll
+			padding: dp(5)
+			do_scroll_x: False
+			canvas.before:
+				Color:
+					rgba: (0.396,0.627,0.537,1)
+					# rgba: (1,0,0,1)
+				Rectangle:
+					pos: self.pos
+					size: self.size			
+			MDGridLayout:
+				id: material_box
+				cols:1
+				padding: dp(10)
+				minimum_height: self.minimum_height
+				size_hint_y: 1.5
+
 <RecycpalHistoryDetailView>:
 	name: "Detail"
 	md_bg_color: 0.396,0.627,0.537,1
@@ -45,17 +91,30 @@
 <RecycpalHistory>:
 	name: "RecycpalHistory"
 	md_bg_color: 0.396,0.627,0.537,1
-	ScrollView:
-		id:history_screen
-		BoxLayout:
-			id:images_box
-			orientation:'vertical'
-			spacing: 10
+	MDBoxLayout:
+		orientation:'vertical'
+		md_bg_color: 0.396,0.627,0.537,1
+		MDBoxLayout:
+			orientation: 'horizontal'
 			size_hint_y: None
-			padding:dp(20)
-			height: self.minimum_height
+			height: "56dp"
+			# padding: [0,"10dp",0,0]
+			MDLabel:
+				padding: dp(15)
+				markup: True
+				text: "Previous Photos"
+				font_style: "H3"
 
-		
+		ScrollView:
+			id:history_screen
+			BoxLayout:
+				id:images_box
+				orientation:'vertical'
+				spacing: 10
+				size_hint_y: None
+				padding:dp(20)
+				height: self.minimum_height
+
 
 <RecycpalCamera>:
 	orientation: 'vertical'
@@ -97,7 +156,7 @@
 
 <RecycpalInfo>:
 	md_bg_color: 0.396,0.627,0.537,1
-	name: "RecycpalInfo"
+	name: "Info"
 	MDBoxLayout:
 		id: info_screen	
 		orientation: 'vertical'
@@ -165,91 +224,6 @@
 				height: self.minimum_height
 				padding: dp(15)
 				spacing: 10
-				MDCard:
-					size_hint: (1,None)
-					md_bg_color: (0.894, 0.890, 0.667, 1)
-					MDBoxLayout:
-						orientation: 'horizontal'
-						Image: 
-							source: "staticfiles/images/glass.png"
-							size_hint: (0.4,0.85)
-							pos_hint: {'center_x':0.5,'center_y':0.5}
-						MDLabel:
-							markup: True
-							text: "Glass"
-							size_hint: (0.8,1)
-							pos_hint: {'center_x':0.6}
-							text_color: 0,0,0,1
-							font_style: "H3"
-				
-				MDCard:
-					size_hint: (1,None)
-					md_bg_color: (0.894, 0.890, 0.667, 1)
-					MDBoxLayout:
-						orientation: 'horizontal'
-						Image: 
-							source: "staticfiles/images/plastic.png"
-							size_hint: (0.4,0.85)
-							pos_hint: {'center_x':0.5,'center_y':0.5}
-						MDLabel:
-							markup: True
-							text: "Plastic"
-							size_hint: (0.8,1)
-							pos_hint: {'center_x':0.6}
-							text_color: 0,0,0,1
-							font_style: "H3"
-
-				MDCard:
-					size_hint: (1,None)
-					md_bg_color: (0.894, 0.890, 0.667, 1)
-					MDBoxLayout:
-						orientation: 'horizontal'
-						Image: 
-							source: "staticfiles/images/cardboard.png"
-							size_hint: (0.4,0.85)
-							pos_hint: {'center_x':0.5,'center_y':0.5}
-						MDLabel:
-							markup: True
-							text: "Cardboard"
-							size_hint: (0.8,1)
-							pos_hint: {'center_x':0.6}
-							text_color: 0,0,0,1
-							font_style: "H3"
-
-				MDCard:
-					size_hint: (1,None)
-					md_bg_color: (0.894, 0.890, 0.667, 1)
-					MDBoxLayout:
-						orientation: 'horizontal'
-						Image: 
-							source: "staticfiles/images/paper.png"
-							size_hint: (0.4,0.85)
-							pos_hint: {'center_x':0.5,'center_y':0.5}
-						MDLabel:
-							markup: True
-							text: "Paper"
-							size_hint: (0.8,1)
-							pos_hint: {'center_x':0.6}
-							text_color: 0,0,0,1
-							font_style: "H3"
-
-				MDCard:
-					size_hint: (1,None)
-					md_bg_color: (0.894, 0.890, 0.667, 1)
-					MDBoxLayout:
-						orientation: 'horizontal'
-						Image: 
-							source: "staticfiles/images/trash.png"
-							size_hint: (0.4,0.85)
-							pos_hint: {'center_x':0.5,'center_y':0.5}
-						MDLabel:
-							markup: True
-							text: "Trash"
-							size_hint: (0.8,1)
-							pos_hint: {'center_x':0.6}
-							text_color: 0,0,0,1
-							font_style: "H3"
-
 
 
 BoxLayout:
