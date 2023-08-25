@@ -1,0 +1,30 @@
+[
+    {
+        "name": "Paper",
+        "body": "PAPER LOREM IPSUM"
+    },
+    {
+        "name": "Metal",
+        "body": "METAL LOREM IPSUM"
+    },
+    {
+        "name": "Cardboard",
+        "body": "CARDBOARD LOREM IPSUM"
+    },
+    {
+        "name": "Trash",
+        "body": "TRASH LOREM IPSUM"
+    },
+    {
+        "name": "Glass",
+        "body": "GLASS LOREM IPSUM"
+    },
+    {
+        "name": "Styrofoam",
+        "body": "STYROFOAM LOREM IPSUM"
+    },
+    {
+        "name": "Plastic",
+        "body": "PLASTIC LOREM IPSUM"
+    }
+]

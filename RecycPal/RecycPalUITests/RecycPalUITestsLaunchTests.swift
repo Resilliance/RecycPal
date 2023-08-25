@@ -2,12 +2,12 @@
 //  RecycPalUITestsLaunchTests.swift
 //  RecycPalUITests
 //
-//  Created by Justin Esguerra on 1/15/22.
+//  Created by Justin Esguerra on 7/14/23.
 //
 
 import XCTest
 
-class RecycPalUITestsLaunchTests: XCTestCase {
+final class RecycPalUITestsLaunchTests: XCTestCase {
 
     override class var runsForEachTargetApplicationUIConfiguration: Bool {
         true
