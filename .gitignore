@@ -4,3 +4,4 @@ IDEWorkspaceChecks.plist
 /buildozer.spec
 /data/images
 /.buildozer
+/.DS_Store
